@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://c700it1ci2yvi"]
 
-[ext_resource type="Texture2D" path="res://icon.svg" id="1_0qtuf"]
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="2_rt43x"]
+[ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
-albedo_texture = ExtResource("1_0qtuf")
+albedo_texture = ExtResource("1_o6v8h")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hheol"]
 material = SubResource("StandardMaterial3D_6p36q")
@@ -28,8 +28,15 @@ mesh = SubResource("PlaneMesh_hheol")
 shape = SubResource("ConcavePolygonShape3D_ebgft")
 
 [node name="Player" type="CharacterBody3D" parent="."]
-script = ExtResource("2_rt43x")
+script = ExtResource("2_kvyb3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_4pt7b")
+
+[node name="Head" type="Node3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Vertical" type="Node3D" parent="Player/Head"]
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head/Vertical"]

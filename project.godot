@@ -15,6 +15,10 @@ run/main_scene="res://sketchfab_scene.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+InteractionManager="*res://Interactions/InteractionManager.tscn"
+
 [input]
 
 ui_left={

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=15 format=3 uid="uid://c700it1ci2yvi"]
 
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://77ckc5m1r0cc" path="res://Blender-Models/newpc/newpc.glb" id="5_10sv4"]
 [ext_resource type="PackedScene" uid="uid://d0yp0v4jc55a2" path="res://Blender-Models/bed/bed.glb" id="6_71mct"]
 [ext_resource type="PackedScene" uid="uid://0rxwim4yax1e" path="res://Interactions/Interactive_obj/Interactive_object.tscn" id="7_oya64"]
+[ext_resource type="PackedScene" uid="uid://cluv3hr4k1ni7" path="res://Blender-Models/newbed/bed1.glb" id="8_mb6lh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
@@ -111,3 +112,6 @@ transform = Transform3D(-0.999527, 0, 0.030748, 0, 1, 0, -0.030748, 0, -0.999527
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractiveObject2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.02263, 0, 7.70807)
 shape = SubResource("BoxShape3D_20n6w")
+
+[node name="bed1" parent="." instance=ExtResource("8_mb6lh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24198, 1.1921e-07, -1.15695)

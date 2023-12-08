@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgmij5x5ofjy7"]
+
+[ext_resource type="PackedScene" uid="uid://b2dvpnmyrshqt" path="res://Blender-Models/button/low_poly_emergency_button.glb" id="1_aswcv"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_aswcv")]

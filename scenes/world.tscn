@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=11 format=3 uid="uid://c700it1ci2yvi"]
 
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
 [ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="3_liswf"]
 [ext_resource type="PackedScene" uid="uid://brfv0j08os8g6" path="res://scenes/push_button.tscn" id="4_88tfm"]
-[ext_resource type="PackedScene" uid="uid://hj2jqhtvtdg6" path="res://Blender-Models/computer.glb" id="5_8v0rk"]
+[ext_resource type="PackedScene" uid="uid://77ckc5m1r0cc" path="res://Blender-Models/newpc/newpc.glb" id="5_10sv4"]
+[ext_resource type="PackedScene" uid="uid://d0yp0v4jc55a2" path="res://Blender-Models/bed/bed.glb" id="6_71mct"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
@@ -65,5 +66,8 @@ vertical_alignment = 1
 [node name="button" parent="." instance=ExtResource("4_88tfm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12794, -1.19209e-07, -4.88755)
 
-[node name="computer" parent="." instance=ExtResource("5_8v0rk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.49411, -1.19209e-07, -1.44931)
+[node name="bed" parent="." instance=ExtResource("6_71mct")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="newpc" parent="." instance=ExtResource("5_10sv4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -1)

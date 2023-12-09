@@ -4,6 +4,12 @@ extends StaticBody3D
 @export var prompt_message = "teste"
 @export var prompt_action = "interact"
 
+@onready var node = $Control/Vp/Node3D
+@onready var cams = node.get_children()
+
+
+var _currentCamera: int = 0
+
 
 func mouseover():
 	for action in InputMap.action_get_events(prompt_action):
@@ -11,4 +17,8 @@ func mouseover():
 			return prompt_message
 		
 func pressed():
-	print("Apertou o botão" + prompt_message)
+	_currentCamera += 1
+	if _currentCamera == cams.size():
+		_currentCamera = 0
+	cams[_currentCamera].make_current()
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=28 format=3 uid="uid://c700it1ci2yvi"]
 
 [ext_resource type="Texture2D" uid="uid://ba478ptfetw1e" path="res://Blender-Models/BAKED/BED/bed_cochao.jpg" id="1_gvamq"]
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://Scripts/computer.gd" id="4_7d8u7"]
 [ext_resource type="Texture2D" uid="uid://c0y3e6obnx6kb" path="res://Blender-Models/newpc/newpc_Image_0.jpg" id="5_xdm5s"]
 [ext_resource type="Texture2D" uid="uid://dpt00v7cnnaqg" path="res://Blender-Models/newpc/newpc_Captura de tela 2023-12-07 202901.png" id="6_k6ntv"]
+[ext_resource type="PackedScene" uid="uid://dxqlgx1b1syv2" path="res://Blender-Models/BAKED/COMPUTER/computer.glb" id="8_k05dl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06dja"]
 albedo_texture = ExtResource("1_gvamq")
@@ -265,3 +266,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.63578, 2.82756, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28295, 0.00644112, 0)
+
+[node name="computer" parent="." instance=ExtResource("8_k05dl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, -3)

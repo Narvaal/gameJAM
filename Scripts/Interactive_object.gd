@@ -12,7 +12,5 @@ func _on_body_entered(body):
 	InteractionManager.register_object(self)
 
 
-
 func _on_body_exited(body):
 	InteractionManager.unregister_object(self)
-

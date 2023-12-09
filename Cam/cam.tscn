@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://7kcajxhphsgj"]
+
+[node name="Cam" type="SubViewport"]
+
+[node name="axisX" type="Node3D" parent="."]
+
+[node name="axisY" type="Node3D" parent="axisX"]
+
+[node name="Camera3D" type="Camera3D" parent="axisX/axisY"]

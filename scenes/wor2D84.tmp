@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://c700it1ci2yvi"]
+
+[ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
+[ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="3_liswf"]
+[ext_resource type="PackedScene" uid="uid://brfv0j08os8g6" path="res://scenes/push_button.tscn" id="4_88tfm"]
+[ext_resource type="PackedScene" uid="uid://77ckc5m1r0cc" path="res://Blender-Models/newpc/newpc.glb" id="5_10sv4"]
+[ext_resource type="Script" path="res://Scripts/interact_new_pc.gd" id="5_t20sc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
+albedo_color = Color(0.239216, 0, 1, 1)
+albedo_texture = ExtResource("1_o6v8h")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hheol"]
+material = SubResource("StandardMaterial3D_6p36q")
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ebgft"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pt7b"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_b3uc2"]
+viewport_path = NodePath("Control/SubViewport")
+
+[node name="world" type="Node3D"]
+
+[node name="ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, 0)
+mesh = SubResource("PlaneMesh_hheol")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ebgft")
+
+[node name="Player" type="CharacterBody3D" parent="." groups=["Player"]]
+script = ExtResource("2_kvyb3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visibility_parent = NodePath("../../newpc/Sprite3D")
+shape = SubResource("CapsuleShape3D_4pt7b")
+
+[node name="Head" type="Node3D" parent="Player" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="Vertical" type="Node3D" parent="Player/Head" groups=["Player"]]
+
+[node name="Camera3D" type="Camera3D" parent="Player/Head/Vertical" groups=["Player"]]
+transform = Transform3D(1, 0, 0, 0, 0.999782, 0.0208726, 0, -0.0208726, 0.999782, 0, 0, 0)
+
+[node name="InteractRayCast" type="RayCast3D" parent="Player/Head/Vertical" groups=["Player"]]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("3_liswf")
+
+[node name="Prompt" type="Label" parent="Player/Head/Vertical/InteractRayCast" groups=["Player"]]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.5
+offset_top = -11.5
+offset_right = 29.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "prompt"
+
+[node name="crosshair" type="Label" parent="Player/Head/Vertical" groups=["Player"]]
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -2.5
+offset_right = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="newpc" parent="." instance=ExtResource("5_10sv4")]
+transform = Transform3D(-0.999527, 0, 0.030748, 0, 1, 0, -0.030748, 0, -0.999527, -7.49032, -0.369032, 7.58821)
+script = ExtResource("5_t20sc")
+
+[node name="Sprite3D" type="Sprite3D" parent="newpc"]
+transform = Transform3D(0.11815, -0.000790722, -0.000110545, 0.000874463, 0.103518, 0.0270479, -0.000104746, -0.0276929, 0.10111, -0.162655, 1.50597, -0.174001)
+texture = SubResource("ViewportTexture_b3uc2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="Control"]
+
+[node name="Node3D" type="Node3D" parent="Control/SubViewport"]
+
+[node name="Camera3D" type="Camera3D" parent="Control/SubViewport/Node3D"]
+transform = Transform3D(-0.999976, 0, -0.00689405, 0, 1, 0, 0.00689405, 0, -0.999976, -6.45847, 3.33697, -1.12834)
+
+[node name="button" parent="." instance=ExtResource("4_88tfm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.51147, 1.52104, 0)

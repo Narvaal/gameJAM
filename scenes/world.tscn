@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=23 format=3 uid="uid://c700it1ci2yvi"]
 
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
@@ -8,11 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://0rxwim4yax1e" path="res://Interactions/Interactive_obj/Interactive_object.tscn" id="7_oya64"]
 [ext_resource type="PackedScene" uid="uid://cluv3hr4k1ni7" path="res://Blender-Models/newbed/bed1.glb" id="8_mb6lh"]
 [ext_resource type="PackedScene" uid="uid://p2ysw4hyapom" path="res://Blender-Models/chair/chair.glb" id="11_1q7vg"]
+[ext_resource type="PackedScene" uid="uid://cwox6t4rvgqsr" path="res://Blender-Models/testeroom/vasoteste/vaso.glb" id="12_amlib"]
 [ext_resource type="PackedScene" uid="uid://cvmxqlynvlbw4" path="res://Blender-Models/door/door.glb" id="12_lvigl"]
 [ext_resource type="PackedScene" uid="uid://ck5ycqgb25yo0" path="res://Blender-Models/papers/papers.glb" id="13_4fdpk"]
-[ext_resource type="PackedScene" uid="uid://dco6q6wclj5wl" path="res://Blender-Models/toilet/toilet.glb" id="14_bsbdv"]
-[ext_resource type="PackedScene" uid="uid://c6v0hp6m5043u" path="res://Blender-Models/testeroom/testeroom3/testeroom.glb" id="15_26ioc"]
-[ext_resource type="PackedScene" uid="uid://csvhcsvt2wogs" path="res://Blender-Models/walltables/walltables.glb" id="15_cwkgj"]
+[ext_resource type="PackedScene" uid="uid://bl0km4pp60h8j" path="res://Blender-Models/testeroom/wallroomteste/wallroom.glb" id="14_f6a77"]
+[ext_resource type="PackedScene" uid="uid://7duklpn41fdp" path="res://Blender-Models/testeroom/bedgray/bed.glb" id="14_kxogl"]
+[ext_resource type="PackedScene" uid="uid://bx0qxqa2c1pe5" path="res://Blender-Models/testeroom/prateleirateste/preteleira.glb" id="15_bsyrq"]
+[ext_resource type="PackedScene" uid="uid://0ongpoipfegp" path="res://scenes/toalha_2.tscn" id="15_xnojp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
@@ -32,6 +34,9 @@ size = Vector3(1.77222, 1, 2.58691)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_20n6w"]
 size = Vector3(2.99115, 1, 2.79651)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6fc3o"]
+size = Vector3(0.0733643, 2.81964, 1.75067)
 
 [node name="world" type="Node3D"]
 
@@ -136,17 +141,30 @@ transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, -14.0882, -7.15256e-
 [node name="papers2" parent="." instance=ExtResource("13_4fdpk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.7862, 0, 1.15685)
 
-[node name="toilet" parent="." instance=ExtResource("14_bsbdv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1803, 7.15256e-07, 0.49529)
-
-[node name="walltables" parent="." instance=ExtResource("15_cwkgj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0042, 0.12497, 0.425592)
-
-[node name="testeroom" parent="." instance=ExtResource("15_26ioc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0943, 0, 0.404229)
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.3333, 2.96461, -2.65044)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3063, -0.196447, 1.02354)
+
+[node name="bed" parent="." instance=ExtResource("14_kxogl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9983, 0, 0.463332)
+
+[node name="bed2" parent="bed" instance=ExtResource("14_kxogl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7297, 0, 1.32142)
+
+[node name="vaso" parent="." instance=ExtResource("12_amlib")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.156, 0, 0.391452)
+
+[node name="wallroom" parent="." instance=ExtResource("14_f6a77")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.131, 0, 0.422756)
+
+[node name="preteleira" parent="." instance=ExtResource("15_bsyrq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.143, -0.0601306, 0.380684)
+
+[node name="toalha2" parent="." instance=ExtResource("15_xnojp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1416, -2.38419e-07, 0.360818)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="toalha2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.314392, 1.40158, -2.04042)
+shape = SubResource("BoxShape3D_6fc3o")

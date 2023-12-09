@@ -4,9 +4,11 @@ extends StaticBody3D
 @export var prompt_message = "teste"
 @export var prompt_action = "interact"
 
-@onready var sprite = $Sprite3D
-@onready var camera1 = $Control/Vp/Node3D/Camera1
-@onready var camera2 = $Control/Vp/Node3D/Camera2
+@onready var node = $Control/Vp/Node3D
+@onready var cams = node.get_children()
+
+
+var _currentCamera: int = 0
 
 
 func mouseover():
@@ -15,7 +17,8 @@ func mouseover():
 			return prompt_message
 		
 func pressed():
-	print("Apertou o botão" + prompt_message)
-	camera2.make_current()
-	
-	
+	_currentCamera += 1
+	if _currentCamera == cams.size():
+		_currentCamera = 0
+	cams[_currentCamera].make_current()
+

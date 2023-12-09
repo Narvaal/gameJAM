@@ -1,12 +1,11 @@
+[gd_scene load_steps=25 format=3 uid="uid://c700it1ci2yvi"]
 
-[gd_scene load_steps=15 format=3 uid="uid://c700it1ci2yvi"]
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
 [ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="3_liswf"]
-[ext_resource type="Script" path="res://Scripts/push_button.gd" id="4_7d8u7"]
+[ext_resource type="Script" path="res://Scripts/computer.gd" id="4_7d8u7"]
 [ext_resource type="Texture2D" uid="uid://c0y3e6obnx6kb" path="res://Blender-Models/newpc/newpc_Image_0.jpg" id="5_xdm5s"]
 [ext_resource type="Texture2D" uid="uid://dpt00v7cnnaqg" path="res://Blender-Models/newpc/newpc_Captura de tela 2023-12-07 202901.png" id="6_k6ntv"]
-
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
@@ -20,6 +19,8 @@ size = Vector2(20, 20)
 data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pt7b"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ydqfn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rctpu"]
 resource_name = "table"
@@ -126,6 +127,24 @@ data = PackedVector3Array(0, 1.03275, 0.66389, -0.513405, 1.00752, 0.699478, 0, 
 [sub_resource type="ViewportTexture" id="ViewportTexture_n7r0x"]
 viewport_path = NodePath("computer2/Control/Vp")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enmpu"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qobr4"]
+material = SubResource("StandardMaterial3D_enmpu")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n5l0q"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_6f54n"]
+material = SubResource("StandardMaterial3D_n5l0q")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvwva"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ggwu1"]
+material = SubResource("StandardMaterial3D_tvwva")
+
 [node name="world" type="Node3D"]
 
 [node name="ground" type="MeshInstance3D" parent="."]
@@ -184,6 +203,10 @@ text = "."
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.989819, 0)
+mesh = SubResource("CapsuleMesh_ydqfn")
+
 [node name="computer2" type="StaticBody3D" parent="."]
 transform = Transform3D(-0.999527, 0, 0.030748, 0, 1, 0, -0.030748, 0, -0.999527, -7.35237, -0.256879, 7.97667)
 script = ExtResource("4_7d8u7")
@@ -211,10 +234,23 @@ offset_bottom = 40.0
 
 [node name="Node3D" type="Node3D" parent="computer2/Control/Vp"]
 
-
 [node name="Camera1" type="Camera3D" parent="computer2/Control/Vp/Node3D"]
 transform = Transform3D(-0.999976, 0, -0.00689405, 0, 1, 0, 0.00689405, 0, -0.999976, -6.45847, 3.33697, -1.12834)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="computer2/Control/Vp/Node3D/Camera1"]
+transform = Transform3D(1, 0, 4.65661e-10, 0, 1, 0, -4.65661e-10, 0, 1, -0.0049305, 0, 0.714832)
+mesh = SubResource("BoxMesh_qobr4")
 
 [node name="Camera2" type="Camera3D" parent="computer2/Control/Vp/Node3D"]
 transform = Transform3D(0.999905, 0, 0.0137878, 0, 1, 0, -0.0137878, 0, 0.999905, -4.12996, 6.67394, 0.929115)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="computer2/Control/Vp/Node3D/Camera2"]
+transform = Transform3D(1, 0, 9.31323e-10, 0, 1, 0, -9.31323e-10, 0, 1, -0.00736284, 0, 0.53379)
+mesh = SubResource("BoxMesh_6f54n")
+
+[node name="Camera3" type="Camera3D" parent="computer2/Control/Vp/Node3D"]
+transform = Transform3D(-0.999976, 0, -0.00689405, 0, 1, 0, 0.00689405, 0, -0.999976, 7.51823, 3.07169, -0.525388)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="computer2/Control/Vp/Node3D/Camera3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00575304, 0, 0.834471)
+mesh = SubResource("BoxMesh_ggwu1")

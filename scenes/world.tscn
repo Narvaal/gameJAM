@@ -129,7 +129,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.24198, 1.1921e-07, -1.15695
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8522, -3.57628e-07, 0.801379)
 
 [node name="door" parent="." instance=ExtResource("12_lvigl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0755, -0.00627863, 0.487493)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0755, -0.00627863, 0.395828)
 
 [node name="newpc" parent="." instance=ExtResource("5_10sv4")]
 transform = Transform3D(0.81, 0, 0, 0, 0.81, 0, 0, 0, 0.81, -14.0882, -7.15256e-07, -5.10959)

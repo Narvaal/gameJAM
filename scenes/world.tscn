@@ -1,11 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=20 format=3 uid="uid://c700it1ci2yvi"]
 
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
 [ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="3_liswf"]
 [ext_resource type="PackedScene" uid="uid://brfv0j08os8g6" path="res://scenes/push_button.tscn" id="4_88tfm"]
 [ext_resource type="PackedScene" uid="uid://77ckc5m1r0cc" path="res://Blender-Models/newpc/newpc.glb" id="5_10sv4"]
-[ext_resource type="PackedScene" uid="uid://d0yp0v4jc55a2" path="res://Blender-Models/bed/bed.glb" id="6_71mct"]
 [ext_resource type="PackedScene" uid="uid://0rxwim4yax1e" path="res://Interactions/Interactive_obj/Interactive_object.tscn" id="7_oya64"]
 [ext_resource type="PackedScene" uid="uid://cluv3hr4k1ni7" path="res://Blender-Models/newbed/bed1.glb" id="8_mb6lh"]
 [ext_resource type="PackedScene" uid="uid://p2ysw4hyapom" path="res://Blender-Models/chair/chair.glb" id="11_1q7vg"]
@@ -104,7 +103,7 @@ prompt_message = "botão 2"
 [node name="InteractiveObject" parent="." instance=ExtResource("7_oya64")]
 action_name = "Bed"
 
-[node name="bed" parent="InteractiveObject" instance=ExtResource("6_71mct")]
+[node name="bed" parent="InteractiveObject" instance=ExtResource("8_mb6lh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.772929, 0, 5.96282)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InteractiveObject"]

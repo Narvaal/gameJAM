@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ipdwpo8rt3v4"
-path.s3tc="res://.godot/imported/GROUND_WALLS_BAKED_framedoorbake.png-50017cf884309be00595f4fba306f253.s3tc.ctex"
+path.s3tc="res://.godot/imported/GROUND_WALLS_BAKED_framedoorbake.png-70149c41b73f343c666ae7ce03908f43.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/WALL_GROUND_BAKED/GROUND_WALLS_BAKED_framedoorbake.png"
-dest_files=["res://.godot/imported/GROUND_WALLS_BAKED_framedoorbake.png-50017cf884309be00595f4fba306f253.s3tc.ctex"]
+source_file="res://Blender-Models/BAKED/WALL_GROUND/GROUND_WALLS_BAKED_framedoorbake.png"
+dest_files=["res://.godot/imported/GROUND_WALLS_BAKED_framedoorbake.png-70149c41b73f343c666ae7ce03908f43.s3tc.ctex"]
 
 [params]
 

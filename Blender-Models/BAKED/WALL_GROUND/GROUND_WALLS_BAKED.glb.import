@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://blg6ibcwfliys"
-path="res://.godot/imported/GROUND_WALLS_BAKED.glb-dc0886d2da05531065b2f005c6cff9fb.scn"
+path="res://.godot/imported/GROUND_WALLS_BAKED.glb-5f97bbe9c644475e8d45235667e8e87b.scn"
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/WALL_GROUND_BAKED/GROUND_WALLS_BAKED.glb"
-dest_files=["res://.godot/imported/GROUND_WALLS_BAKED.glb-dc0886d2da05531065b2f005c6cff9fb.scn"]
+source_file="res://Blender-Models/BAKED/WALL_GROUND/GROUND_WALLS_BAKED.glb"
+dest_files=["res://.godot/imported/GROUND_WALLS_BAKED.glb-5f97bbe9c644475e8d45235667e8e87b.scn"]
 
 [params]
 

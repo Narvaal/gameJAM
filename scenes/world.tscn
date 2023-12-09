@@ -1,11 +1,15 @@
-[gd_scene load_steps=25 format=3 uid="uid://c700it1ci2yvi"]
+[gd_scene load_steps=27 format=3 uid="uid://c700it1ci2yvi"]
 
+[ext_resource type="Texture2D" uid="uid://ba478ptfetw1e" path="res://Blender-Models/BAKED/BED/bed_cochao.jpg" id="1_gvamq"]
 [ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="1_o6v8h"]
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="2_kvyb3"]
 [ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="3_liswf"]
 [ext_resource type="Script" path="res://Scripts/computer.gd" id="4_7d8u7"]
 [ext_resource type="Texture2D" uid="uid://c0y3e6obnx6kb" path="res://Blender-Models/newpc/newpc_Image_0.jpg" id="5_xdm5s"]
 [ext_resource type="Texture2D" uid="uid://dpt00v7cnnaqg" path="res://Blender-Models/newpc/newpc_Captura de tela 2023-12-07 202901.png" id="6_k6ntv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_06dja"]
+albedo_texture = ExtResource("1_gvamq")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
 albedo_color = Color(0.239216, 0, 1, 1)
@@ -149,6 +153,7 @@ material = SubResource("StandardMaterial3D_tvwva")
 
 [node name="ground" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, -1.08068)
+material_override = SubResource("StandardMaterial3D_06dja")
 mesh = SubResource("PlaneMesh_hheol")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="ground"]

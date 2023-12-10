@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b4dvo4foxc83o"
-path="res://.godot/imported/walltable.glb-9076c1264d2bd477ff6f3c9b0b944107.scn"
+uid="uid://wteql2kb3vi3"
+path="res://.godot/imported/corridor.glb-1cdc04a0196c1a19b2b2ac8572b55c34.scn"
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/WALLTABLE/walltable.glb"
-dest_files=["res://.godot/imported/walltable.glb-9076c1264d2bd477ff6f3c9b0b944107.scn"]
+source_file="res://Blender-Models/BAKED/CORRIDOR/corridor.glb"
+dest_files=["res://.godot/imported/corridor.glb-1cdc04a0196c1a19b2b2ac8572b55c34.scn"]
 
 [params]
 

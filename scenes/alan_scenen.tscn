@@ -1,0 +1,102 @@
+[gd_scene load_steps=18 format=3 uid="uid://cgum6r5cwfton"]
+
+[ext_resource type="PackedScene" uid="uid://bldct4kgwmsuw" path="res://Blender-Models/BAKED/BED/bed.glb" id="1_p17ol"]
+[ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
+[ext_resource type="PackedScene" uid="uid://dakojgpbewarn" path="res://Blender-Models/BAKED/WALL_GROUND/UNBAKED_GROUND/ground.glb" id="3_w73j7"]
+[ext_resource type="PackedScene" uid="uid://sdq4xwh0objm" path="res://Blender-Models/BAKED/COKEBOTTLE/coke.glb" id="4_rmfo0"]
+[ext_resource type="PackedScene" uid="uid://dxqlgx1b1syv2" path="res://Blender-Models/BAKED/COMPUTER/computer.glb" id="5_8cj8h"]
+[ext_resource type="PackedScene" uid="uid://bqjcwklhjbb8m" path="res://Blender-Models/BAKED/CHAIR/chair.glb" id="6_5hx0o"]
+[ext_resource type="PackedScene" uid="uid://bfnc51hcq821p" path="res://Blender-Models/BAKED/PAPERS/papers_notes.glb" id="7_s508g"]
+[ext_resource type="PackedScene" uid="uid://kxexyobkli05" path="res://Blender-Models/BAKED/TOILET/TOILET_PEE.glb" id="8_6ywxx"]
+[ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="9_3h0a8"]
+[ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="10_2iura"]
+[ext_resource type="PackedScene" uid="uid://ele24jyva0ec" path="res://Blender-Models/BAKED/TRASH/trash.glb" id="11_lk43m"]
+[ext_resource type="PackedScene" uid="uid://d2pnhih0pfjgu" path="res://Blender-Models/BAKED/DOOR/door.glb" id="12_ovjqd"]
+[ext_resource type="PackedScene" uid="uid://duu4ufogws8ip" path="res://scenes/Player/player.tscn" id="13_10ck6"]
+[ext_resource type="PackedScene" uid="uid://5lpm4w6lc2jr" path="res://Blender-Models/BAKED/CARPET/carpet.glb" id="14_jt8w2"]
+[ext_resource type="PackedScene" uid="uid://bch6yg6dbjxhc" path="res://Blender-Models/BAKED/TETO/teto.glb" id="15_ilfcn"]
+[ext_resource type="PackedScene" uid="uid://b4dvo4foxc83o" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="16_mleik"]
+[ext_resource type="PackedScene" uid="uid://cq70dunc4uq6" path="res://Blender-Models/BAKED/VIDEOTAPE/videotape.glb" id="17_cc7wg"]
+
+[node name="AlanScenen" type="Node3D"]
+
+[node name="Room" type="Node" parent="."]
+
+[node name="bed" parent="Room" instance=ExtResource("1_p17ol")]
+transform = Transform3D(1, 0, 0, 0, 1.22, 0, 0, 0, 1, -0.389, 0, 1.1)
+
+[node name="corridor" parent="Room" instance=ExtResource("2_fw2iu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406056, 0, 1.08189)
+
+[node name="ground" parent="Room" instance=ExtResource("3_w73j7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.409, 0, 1.075)
+
+[node name="coke" parent="Room" instance=ExtResource("4_rmfo0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.726, -0.781, -0.063)
+
+[node name="coke" parent="Room/coke" instance=ExtResource("4_rmfo0")]
+transform = Transform3D(-3.99323e-08, -0.913545, 0.406737, 1, -4.37114e-08, 0, 1.7779e-08, 0.406737, 0.913545, 1.274, 3.549, -0.063)
+
+[node name="coke2" parent="Room/coke" instance=ExtResource("4_rmfo0")]
+transform = Transform3D(0.22159, 0.725488, 0.651587, -0.90934, -0.0875594, 0.406737, 0.352135, -0.682643, 0.640312, 2.47302, -0.424713, 1.32295)
+
+[node name="computer" parent="Room" instance=ExtResource("5_8cj8h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.402565, 0, 1.09237)
+
+[node name="chair" parent="Room" instance=ExtResource("6_5hx0o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.435267, 0, 0.960617)
+
+[node name="papers_notes" parent="Room" instance=ExtResource("7_s508g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25779, -4.76837e-07, 0.509187)
+
+[node name="TOILET_PEE" parent="Room" instance=ExtResource("8_6ywxx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.365131, -4.76837e-07, 1.09233)
+
+[node name="TOILET_PAPER" parent="Room" instance=ExtResource("9_3h0a8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.378891, -0.00433064, 1.09415)
+
+[node name="TOWEL" parent="Room" instance=ExtResource("10_2iura")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.449925, 0, 1.06189)
+
+[node name="trash" parent="Room" instance=ExtResource("11_lk43m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441, 0, 1.1)
+
+[node name="door" parent="Room" instance=ExtResource("12_ovjqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323, 0, 1.08)
+
+[node name="carpet2" parent="Room" instance=ExtResource("14_jt8w2")]
+transform = Transform3D(0.997564, 0, 0.0697565, 0, 1, 0, -0.0697565, 0, 0.997564, -0.17, 0, 0.885)
+
+[node name="teto" parent="Room" instance=ExtResource("15_ilfcn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.414, 0, 1.073)
+
+[node name="walltable" parent="Room" instance=ExtResource("16_mleik")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416676, -0.358888, 1.13512)
+
+[node name="videotape" parent="Room" instance=ExtResource("17_cc7wg")]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 1.64497, 0.0848989, -2.85668)
+
+[node name="Light" type="Node" parent="."]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, -0.782608, 0.622515, 0, -0.622515, -0.782608, 0.396971, 2.96417, -5.01811)
+light_color = Color(0.501961, 0.682353, 0.396078, 1)
+light_energy = 0.5
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.986, 2.336, -1.923)
+light_color = Color(1, 0.631373, 0.666667, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.413003, 2.33612, -2.16371)
+light_color = Color(0.952941, 0.733333, 0.196078, 1)
+light_energy = 0.4
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Light"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05654, 2.336, -2.345)
+light_energy = 0.2
+
+[node name="Player" parent="." instance=ExtResource("13_10ck6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.23161, -9.53674e-07, -2.49052)
+speed = 2.5
+jump_force = 0.0

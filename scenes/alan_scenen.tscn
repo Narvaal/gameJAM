@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cgum6r5cwfton"]
+[gd_scene load_steps=19 format=3 uid="uid://cgum6r5cwfton"]
 
 [ext_resource type="PackedScene" uid="uid://bldct4kgwmsuw" path="res://Blender-Models/BAKED/BED/bed.glb" id="1_p17ol"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bch6yg6dbjxhc" path="res://Blender-Models/BAKED/TETO/teto.glb" id="15_ilfcn"]
 [ext_resource type="PackedScene" uid="uid://b4dvo4foxc83o" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="16_mleik"]
 [ext_resource type="PackedScene" uid="uid://cq70dunc4uq6" path="res://Blender-Models/BAKED/VIDEOTAPE/videotape.glb" id="17_cc7wg"]
+[ext_resource type="PackedScene" uid="uid://ctmgvwwcic235" path="res://Blender-Models/BAKED/MINIBAR/minibar.glb" id="17_wr7rs"]
 
 [node name="AlanScenen" type="Node3D"]
 
@@ -75,6 +76,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416676, -0.358888, 1.13512
 
 [node name="videotape" parent="Room" instance=ExtResource("17_cc7wg")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 1.64497, 0.0848989, -2.85668)
+
+[node name="minibar" parent="Room" instance=ExtResource("17_wr7rs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459193, 0, 1.16956)
 
 [node name="Light" type="Node" parent="."]
 

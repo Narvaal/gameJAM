@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://1lygb5oe2h61"]
+
+[ext_resource type="PackedScene" uid="uid://duu4ufogws8ip" path="res://scenes/Player/player.tscn" id="1_8uufw"]
+[ext_resource type="Texture2D" uid="uid://ba478ptfetw1e" path="res://Blender-Models/BAKED/BED/bed_cochao.jpg" id="2_lxatf"]
+[ext_resource type="Texture2D" uid="uid://cllw1r4j57gm4" path="res://icon.svg" id="3_hl3xg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p804f"]
+albedo_texture = ExtResource("2_lxatf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p36q"]
+albedo_color = Color(0.239216, 0, 1, 1)
+albedo_texture = ExtResource("3_hl3xg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6r6km"]
+material = SubResource("StandardMaterial3D_6p36q")
+size = Vector2(20, 20)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jwwbl"]
+data = PackedVector3Array(10, 0, 10, -10, 0, 10, 10, 0, -10, -10, 0, 10, -10, 0, -10, 10, 0, -10)
+
+[node name="World2" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_8uufw")]
+
+[node name="ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, -1.08068)
+material_override = SubResource("StandardMaterial3D_p804f")
+mesh = SubResource("PlaneMesh_6r6km")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jwwbl")

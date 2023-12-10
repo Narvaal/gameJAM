@@ -16,8 +16,8 @@ func _physics_process(delta):
 	if is_colliding():
 		var detected = get_collider()
 		
-		if detected is Interactable:
-			prompt.text = "passou sobre o " + detected.mouseover()
+		if detected is Interactable or detected is Action:
+			prompt.text = detected.mouseover()
 		
 			if Input.is_action_just_pressed(detected.prompt_action):
 				detected.pressed()

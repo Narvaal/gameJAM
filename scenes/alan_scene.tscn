@@ -1,3 +1,36 @@
-[gd_scene format=3 uid="uid://coit24fi45f83"]
+[gd_scene load_steps=9 format=3 uid="uid://coit24fi45f83"]
+
+[ext_resource type="PackedScene" uid="uid://blg6ibcwfliys" path="res://Blender-Models/BAKED/WALL_GROUND/GROUND_WALLS_BAKED.glb" id="1_dax32"]
+[ext_resource type="PackedScene" uid="uid://kxexyobkli05" path="res://Blender-Models/BAKED/TOILET/TOILET_PEE.glb" id="2_fgsek"]
+[ext_resource type="PackedScene" uid="uid://dxqlgx1b1syv2" path="res://Blender-Models/BAKED/COMPUTER/computer.glb" id="3_eey4s"]
+[ext_resource type="PackedScene" uid="uid://bqjcwklhjbb8m" path="res://Blender-Models/BAKED/CHAIR/chair.glb" id="4_l2bkg"]
+[ext_resource type="PackedScene" uid="uid://bldct4kgwmsuw" path="res://Blender-Models/BAKED/BED/bed.glb" id="5_ht568"]
+[ext_resource type="PackedScene" uid="uid://bdska1sl31jlj" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="6_qvq56"]
+[ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="7_5bvv3"]
+[ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="8_k3o8f"]
 
 [node name="AlanScene" type="Node3D"]
+
+[node name="GROUND_WALLS_BAKED" parent="." instance=ExtResource("1_dax32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12324, 0, 2.91021)
+
+[node name="TOILET_PEE" parent="." instance=ExtResource("2_fgsek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17005, -2.38419e-07, 2.91177)
+
+[node name="computer" parent="." instance=ExtResource("3_eey4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.03258, 2.38419e-07, 2.95484)
+
+[node name="chair" parent="." instance=ExtResource("4_l2bkg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.993818, 0, 3.1634)
+
+[node name="bed" parent="." instance=ExtResource("5_ht568")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12437, 0, 2.88936)
+
+[node name="walltable" parent="." instance=ExtResource("6_qvq56")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12173, 0.242237, 3.15837)
+
+[node name="TOWEL" parent="." instance=ExtResource("7_5bvv3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.22302, 0, 2.94378)
+
+[node name="TOILET_PAPER" parent="." instance=ExtResource("8_k3o8f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15428, 0.00488126, 2.91496)

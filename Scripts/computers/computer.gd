@@ -5,8 +5,8 @@ extends StaticBody3D
 @export var prompt_message = "[E] to change cams"
 @export var prompt_action = "interact"
 
-@onready var node = $Control/Screen/Node3D
-@onready var cams = node.get_children()
+
+@onready var cams = $Control/ViewPort/Node3D.get_children()
 
 var _currentCamera: int = 0
 

@@ -4,7 +4,7 @@ extends CharacterBody3D
 @export var speed = 5.0
 @export var jump_force = 4.5
 @export var can_move = true
-@export  var can_look_around = true
+@export var can_look_around = true
 
 @export_category("Camera Settings")
 @export var mouse_sensitivity := 0.2

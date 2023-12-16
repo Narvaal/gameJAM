@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=54 format=3 uid="uid://cgum6r5cwfton"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://6job2tt01k4y" path="res://Blender-Models/BAKED/TOILET/TOILET_PEE_toiletbake.png" id="20_w2keo"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
@@ -454,7 +454,6 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/bed"]
 transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, -0.00832844, 0.00865787, 0.00829291)
 script = ExtResource("2_4vl82")
-pos = Vector3(1, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/bed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6ajaf")
@@ -466,7 +465,6 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/chair"]
 script = ExtResource("2_4vl82")
-pos = Vector3(0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/chair/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tb4ar")
@@ -479,7 +477,6 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/toilet"]
 transform = Transform3D(1, 0, 2.84217e-14, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 script = ExtResource("2_4vl82")
-pos = Vector3(0, -0.8, -0.5)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/toilet/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_kc4ic")

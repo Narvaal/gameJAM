@@ -28,13 +28,17 @@ func _input(event: InputEvent):
 	# Esc solta o mouse
 	if Input.is_action_just_pressed("ui_cancel"):
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	# Click segura o mouse
+	if Input.is_action_just_pressed("click"):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	
 # quando o jogo começar, trava o mouse na tela
 func _ready():
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
-
+	
 func _physics_process(delta):
 	# Add the gravity.
 	if can_move:

@@ -23,9 +23,6 @@ func mouseover():
 			return prompt_message
 		
 func pressed():
-	
-	
-	
 	if	player.can_move:
 		pos_player_before = player.global_position
 		player.can_move = false
@@ -35,4 +32,3 @@ func pressed():
 		player.can_move = true
 		player.global_position = pos_player_before
 		player.global_rotation = rot_player_before
-	

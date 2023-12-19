@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=68 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -19,16 +19,17 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://6job2tt01k4y" path="res://Blender-Models/BAKED/TOILET/TOILET_PEE_toiletbake.png" id="20_w2keo"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
-[ext_resource type="PackedScene" uid="uid://blsikd21tnnbw" path="res://Blender-Models/dino/trexnew.glb" id="27_145to"]
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="29_gyq86"]
-[ext_resource type="PackedScene" uid="uid://cuus4fe0tmu2v" path="res://Blender-Models/BAKED/DARKLANDSCAPE/landscape.glb" id="30_7e6jj"]
+
+[sub_resource type="Environment" id="Environment_sktv7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mxgi"]
 resource_name = "pillow"
@@ -424,8 +425,6 @@ albedo_color = Color(1, 0, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_vic8a"]
 material = SubResource("StandardMaterial3D_tvwva")
 
-[sub_resource type="Environment" id="Environment_sktv7"]
-
 [sub_resource type="Curve3D" id="Curve3D_8wuhq"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, 4.52398, 2.86102e-05, 44.9915, 0, 0, 0, 0, 0, 0, -11.1371, 2.86102e-05, 44.131, 0, 0, 0, 0, 0, 0, -31.6169, 2.86102e-05, 41.2053, 0, 0, 0, 0, 0, 0, -34.0263, 2.86102e-05, 27.7815, 0, 0, 0, 0, 0, 0, -27.3144, 2.86102e-05, 13.8415, 0, 0, 0, 0, 0, 0, -14.9232, 2.86102e-05, 9.02271, 0, 0, 0, 0, 0, 0, 6.76127, 2.86102e-05, 10.7437, 0, 0, 0, 0, 0, 0, 25.1759, 2.86102e-05, 14.0136, 0, 0, 0, 0, 0, 0, 33.6088, 2.86102e-05, 20.5534, 0, 0, 0, 0, 0, 0, 40.4927, 2.86102e-05, 29.6746, 0, 0, 0, 0, 0, 0, 41.7777, 2.86102e-05, 36.6992, 0, 0, 0, 0, 0, 0, 43.0742, 2.86102e-05, 43.7868, 0, 0, 0, 0, 0, 0, 37.7392, 2.86102e-05, 49.6382, 0, 0, 0, 0, 0, 0, 22.2502, 2.86102e-05, 52.9081, 0, 0, 0, 0, 0, 0, 7.62178, 2.86102e-05, 55.8337, 0, 0, 0, 0, 0, 0, -2.53209, 2.86102e-05, 60.3083, 0, 0, 0, 0, 0, 0, -6.49037, 2.86102e-05, 67.7086, 0, 0, 0, 0, 0, 0, 0.221508, 2.86102e-05, 73.56, 0, 0, 0, 0, 0, 0, 11.408, 2.86102e-05, 72.3553, 0, 0, 0, 0, 0, 0, 21.7339, 2.86102e-05, 65.6434, 0, 0, 0, 0, 0, 0, 40.1486, 2.86102e-05, 65.4713, 0, 0, 0, 0, 0, 0, 47.5488, 2.86102e-05, 68.397, 0, 0, 0, 0, 0, 0, 56.6701, 2.86102e-05, 68.0528, 0, 0, 0, 0, 0, 0, 69.7496, 2.86102e-05, 55.6616, 0, 0, 0, 0, 0, 0, 68.7171, 2.86102e-05, 43.0984, 0, 0, 0, 0, 0, 0, 60.4563, 2.86102e-05, 37.9354, 0, 0, 0, 0, 0, 0, 26.2085, 2.86102e-05, 41.0332, 0, 0, 0, 0, 0, 0, 11.7522, 2.86102e-05, 49.9824, 0, 0, 0, 0, 0, 0, -7.35086, 2.86102e-05, 57.8989, 0, 0, 0, 0, 0, 0, -23.3561, 2.86102e-05, 57.2105, 0, 0, 0, 0, 0, 0, -36.0915, 2.86102e-05, 52.736, 0, 0, 0, 0, 0, 0, -51.2362, 2.86102e-05, 41.3774, 0, 0, 0, 0, 0, 0, -53.1293, 2.86102e-05, 31.9119, 0, 0, 0, 0, 0, 0, -45.729, 2.86102e-05, 18.144, 0, 0, 0, 0, 0, 0, -34.3705, 2.86102e-05, 5.58072, 0, 0, 0, 0, 0, 0, -22.8398, 2.86102e-05, -0.614855, 0, 0, 0, 0, 0, 0, -13.0301, 2.86102e-05, -2.50795, 0, 0, 0, 0, 0, 0, 4.52398, 2.86102e-05, 44.9915),
@@ -434,6 +433,9 @@ _data = {
 point_count = 38
 
 [node name="AlanScenen" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sktv7")
 
 [node name="Room" type="Node" parent="."]
 
@@ -735,18 +737,14 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 visible = false
 texture = SubResource("ViewportTexture_wth1o")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_sktv7")
-
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1507, 0.90317, -20.2203)
+visible = false
 curve = SubResource("Curve3D_8wuhq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0548622, 0, 0.998491, 0, 0.999996, 0, -0.998488, 0, 0.0548624, 4.52398, 2.86102e-05, 44.9915)
+transform = Transform3D(0.0548622, 0, 0.99849, 0, 0.999996, 0, -0.998487, 0, 0.0548624, 4.52398, 2.86102e-05, 44.9915)
 
 [node name="trexnew" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("27_145to")]
 script = ExtResource("29_gyq86")
 pathFollow3D = NodePath("..")
-
-[node name="landscape" parent="." instance=ExtResource("30_7e6jj")]

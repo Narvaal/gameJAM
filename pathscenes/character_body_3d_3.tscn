@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://by6npq2mjkw2r"]
+
+[ext_resource type="Script" path="res://pathscripts/pathfinding.gd" id="1_easif"]
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="2_7aujb"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="3_i2mjg"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_fcfnx"]
+
+[node name="CharacterBody3D3" type="CharacterBody3D"]
+script = ExtResource("1_easif")
+
+[node name="Trex" parent="." instance=ExtResource("2_7aujb")]
+script = ExtResource("3_i2mjg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.572545, 12.8217, 11.6584)
+shape = SubResource("SeparationRayShape3D_fcfnx")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+avoidance_enabled = true
+height = 9.72
+radius = 4.75
+use_3d_avoidance = true

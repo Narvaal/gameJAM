@@ -4,13 +4,14 @@ extends Node3D
 @export var pathFollow3D: PathFollow3D
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	animation.play_backwards("TRex_Walk")
+	#animation.play_backwards("TRex_Walk")
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	animation.play("TRex_Walk")
-	const move_speed := 10
+	#animation.play("TRex_Walk")
+	#const move_speed := 10
 	
-	pathFollow3D.progress += move_speed * delta
+	#pathFollow3D.progress += move_speed * delta
 	pass

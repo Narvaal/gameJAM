@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dadnrhn1do2s4"]
+
+[ext_resource type="PackedScene" uid="uid://c0ea2c6d4c1uy" path="res://Blender-Models/BAKED/LAMPBOX/lampbox.glb" id="1_alypd"]
+
+[node name="lampbox" instance=ExtResource("1_alypd")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(0.185801, 0, 0, 0, 0.185801, 0, 0, 0, 0.185801, 0, 0, 0)

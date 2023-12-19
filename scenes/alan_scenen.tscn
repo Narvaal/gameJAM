@@ -26,7 +26,7 @@
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
-[ext_resource type="PackedScene" uid="uid://cqyhtal0w4xgf" path="res://Blender-Models/dino/Trex.glb" id="28_4bppo"]
+[ext_resource type="PackedScene" uid="uid://blsikd21tnnbw" path="res://Blender-Models/dino/trexnew.glb" id="27_145to"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="29_gyq86"]
 [ext_resource type="PackedScene" uid="uid://cuus4fe0tmu2v" path="res://Blender-Models/BAKED/DARKLANDSCAPE/landscape.glb" id="30_7e6jj"]
 
@@ -743,10 +743,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.1507, 0.90317, -20.2203)
 curve = SubResource("Curve3D_8wuhq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(0.0122996, 0.000800345, 0.999921, -0.0649328, 0.997886, -3.78349e-09, -0.997808, -0.064928, 0.0123256, 57.5267, 0, 49.6087)
+transform = Transform3D(0.0548622, 0, 0.998491, 0, 0.999996, 0, -0.998488, 0, 0.0548624, 4.52398, 2.86102e-05, 44.9915)
 
-[node name="Trex2" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("28_4bppo")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.0369024, -0.0655127, -0.148041)
+[node name="trexnew" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("27_145to")]
 script = ExtResource("29_gyq86")
 pathFollow3D = NodePath("..")
 

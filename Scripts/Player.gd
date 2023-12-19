@@ -14,6 +14,7 @@ extends CharacterBody3D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var cam_vertical := 0.0
+@onready var camera = get_node("Head/Vertical/Camera3D")
 
 # Pega o input do mouse, caso o input seja uma alteração no eixo X, roda o eixo y do personagem
 func _input(event: InputEvent):
@@ -36,8 +37,12 @@ func _input(event: InputEvent):
 	
 # quando o jogo começar, trava o mouse na tela
 func _ready():
+	set_player_cam()
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func set_player_cam():
+	camera.set_current(true)
 	
 func _physics_process(delta):
 	# Add the gravity.

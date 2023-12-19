@@ -20,12 +20,13 @@ func _physics_process(delta):
 		
 	if is_colliding():
 		var detected = get_collider()
-		if detected is Interactable or detected is Action or detected is Notes:
+		if detected is Interactable or detected is Action or detected is Notes or detected is Action2:
 			prompt.text = detected.mouseover()
 		
 			if Input.is_action_just_pressed(detected.prompt_action):
 				detected.pressed()
 			
-			if detected is Interactable:
+			
+			if detected is Interactable or detected is Action2:
 				if Input.is_action_just_pressed(detected.prompt_action2):
 					detected.pressed2()

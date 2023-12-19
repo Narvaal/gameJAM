@@ -604,11 +604,8 @@ script = ExtResource("17_om381")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/bed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6ajaf")
 
-[node name="sleep_view" type="Camera3D" parent="Room/bed/StaticBody3D"]
-transform = Transform3D(-0.82486, 1.34729e-08, 0.133214, -0.0131845, 0.831445, -0.0816384, -0.13256, -0.0826961, -0.82081, 0.0601625, 0.0823326, -0.00554657)
-
-[node name="hidde_view" type="Camera3D" parent="Room/bed/StaticBody3D"]
-transform = Transform3D(-0.824617, 0, 0.134711, 0, 0.835548, 0, -0.134711, 0, -0.824617, 0.161294, -0.318931, -0.158515)
+[node name="sleep_view" type="Camera3D" parent="Room/bed"]
+transform = Transform3D(0.835548, -8.83105e-08, 2.39724e-07, 8.83105e-08, -0.635866, -0.542046, 2.39724e-07, 0.542046, -0.635866, 0, 0, 0)
 
 [node name="chair" type="MeshInstance3D" parent="Room"]
 transform = Transform3D(0.684758, 0, 0.728771, 0, 1, 0, -0.728771, 0, 0.684758, 0.665746, -15.6208, -3.58442)

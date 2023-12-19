@@ -7,6 +7,12 @@ var auto_complete: Array[String] = ["arquivos","menu","clear","valores.txt"]
 var cont = 0
 var find_index = 0
 
+var finalizado = false
+var respondendo = false
+var perguntas_1: Array[String] = ["qual é o nome","quantos"]
+var respostas_1 = []
+var respostas_corretas = ["1","2","3"]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -22,15 +28,15 @@ func _process(delta):
 			if find_index != -1:
 				input.text = auto_complete[find_index]
 		
-	if Input.is_action_just_pressed("ui_up"):
-		if cont < input_list.size():
-			input.text = input_list[cont]
-			cont += 1
-			
-	if Input.is_action_just_pressed("ui_down"):
-		if cont > 0 :
-			input.text = input_list[cont]
-			cont -= 1
+	#if Input.is_action_just_pressed("ui_up"):
+		#if cont < input_list.size():
+			#input.text = input_list[cont]
+			#cont += 1
+			#
+	#if Input.is_action_just_pressed("ui_down"):
+		#if cont > 0 :
+			#input.text = input_list[cont]
+			#cont -= 1
 			
 			
 		
@@ -50,14 +56,31 @@ func _process(delta):
 					prompt.text += get_arquivo2()
 				"exp-676584.txt":
 					prompt.text += get_arquivo3()
+				"relatorios":
+					prompt.text += get_relatorios()
+				"rlt-1.txt":
+					prompt.text += get_quest1()
+				"enviar":
+					prompt.text += get_score()
+				"back":
+					prompt.text += back()
+					prompt.text += get_relatorios()
 				_:
-					prompt.text += "[color=red]Não foi possivel encontrar o comando {" + input.text +"}\n"
+					
+					
+					if respondendo and input.text != "back":
+						prompt.text += "Respostas Salvas"
+						get_answer(input.text)
+					else:
+						prompt.text += "[color=red]Não foi possivel encontrar o comando {" + input.text +"}\n"
+						
 			input_list.append(input.text)
 			input.clear()			
 
 func get_menu():
 	return get_logo() + "[color=white]-->Menu
- -Relatórios               
+ -Relatórios
+ -Enviar              
  -Glossario                
  -Arquivos                 
  -Sair                   
@@ -143,3 +166,48 @@ Alunos: Emma Weber, Felix Gruber, Sophie Hofer, Maximilian Bauer, Sarah Huber, L
 Colegas de Trabalho: Martina Steiner, Thomas Berger, Julia Wagner.
 Observação Sobre o Experimento: Dada a natureza discreta de Alexandre e a limitada extensão de seu círculo social, eliminar todas as pessoas que o conhecem seria relativamente simples, o que o torna um candidato perfeito para o experimento. Os métodos de eliminação poderiam variar, dependendo da situação de cada indivíduo. Para sua família e colegas de trabalho, métodos discretos como envenenamento ou 'acidentes' domésticos poderiam ser empregados, enquanto para os alunos, medidas mais indiretas, como falsificação de registros ou criação de cenários de transferência para outras escolas, seriam adequadas. Essas estratégias garantiriam que qualquer rastro da existência de Alexandre fosse eficientemente apagado, permitindo a realização do experimento com o mínimo de interrupções ou suspeitas.
 "
+
+func get_relatorios():
+	return "Nome					Data					Acessivel
+rlt-1.txt		01/06/1967			*
+rlt-2.txt		02/06/1971			*
+rlt-3.txt		02/04/1973
+"
+
+
+func get_answer(value:String):
+	if value != null:
+		respostas_1 = value.rsplit(" ", true, 1)
+		respondendo = false
+
+func get_help_quests():
+	return "O usuario deve responder as perguntas a baixo separado por espaços vazios[ ] + \n"
+
+func get_quest1():
+	var main = get_help_quests()
+	for i in range(perguntas_1.size()):
+		if respostas_1.size() > i:
+			main += "-" + perguntas_1[i] + " :  "	+ respostas_1[i] + "\n"
+		else:
+			main += "-" + perguntas_1[i] + " : " + "\n"
+			
+	respondendo = true
+	return get_comandos() + main
+
+func get_comandos():
+	return "Caso não queira refazer o relatorio escreva back para voltar + \n"
+
+
+func get_score():
+	var pontos = 0
+	if respostas_1.size() > 0:
+		for i in range(perguntas_1.size()):
+			if respostas_1[i] == respostas_corretas[i]:
+				pontos += 4
+		finalizado = true
+		return "Total " + str(pontos)
+	finalizado = false
+	return "Responda o relatorios antes"
+	
+func back():
+	return "Saiu do modo preenchimento + \n"

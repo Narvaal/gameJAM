@@ -10,7 +10,7 @@ _data = {
 }
 point_count = 23
 
-[node name="Trex" type="Node"]
+[node name="Trex" type="Node3D"]
 
 [node name="Path3D" type="Path3D" parent="."]
 transform = Transform3D(0.325519, 0, -0.945536, 0, 1, 0, 0.945536, 0, 0.325519, 91.8041, 39.706, 11.7778)

@@ -25,16 +25,8 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
-	
-	if Input.is_action_just_pressed("ui_cancel"):
-		self.visible = false
-		player.can_look_around = true
-		player.can_move = true
-		computer_colision.collision_layer = player.collision_layer
-		#if get_tree().get_current_scene().get_name() == self.name:
-			#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
 		
+
 	if Input.is_action_just_pressed("ui_focus_next"):
 		if input.text != "":
 			find_index = auto_complete.find(input.text.to_lower(),0)

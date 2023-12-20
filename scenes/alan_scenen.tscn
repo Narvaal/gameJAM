@@ -20,14 +20,14 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
-[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
+[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
 [ext_resource type="Texture2D" uid="uid://cuvmm0gqe1jj" path="res://images/1-strawberry-png-images.png" id="30_dramn"]
@@ -586,10 +586,10 @@ script = ExtResource("17_om381")
 shape = SubResource("ConcavePolygonShape3D_6ajaf")
 
 [node name="sleep_view" type="Camera3D" parent="Room/bed/StaticBody3D"]
-transform = Transform3D(-0.82486, 1.34729e-08, 0.133214, -0.0131845, 0.831445, -0.0816384, -0.13256, -0.0826961, -0.82081, 0.0601625, 0.0823326, -0.00554657)
+transform = Transform3D(-0.82486, -9.80157e-08, 0.133214, -0.0706933, 0.70819, -0.437731, -0.112909, -0.443403, -0.699132, 0.0601625, 0.0823326, -0.00554657)
 
 [node name="hidde_view" type="Camera3D" parent="Room/bed/StaticBody3D"]
-transform = Transform3D(-0.824617, 0, 0.134711, 0, 0.835548, 0, -0.134711, 0, -0.824617, 0.161294, -0.318931, -0.158515)
+transform = Transform3D(-0.637246, 0, 0.540424, 0, 0.835548, 0, -0.540424, 0, -0.637246, 0.161294, -0.318931, -0.158515)
 
 [node name="chair" type="MeshInstance3D" parent="Room"]
 transform = Transform3D(0.684758, 0, 0.728771, 0, 1, 0, -0.728771, 0, 0.684758, 0.665746, -15.6208, -3.58442)

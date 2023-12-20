@@ -10,6 +10,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	rng.randomize()
-	if rng.randi_range(0,1000) == 1:
+	if rng.randi_range(0,5000) == 1:
 		self.play()
 

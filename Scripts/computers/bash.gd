@@ -104,7 +104,6 @@ Nome					Data					Acessivel
 valores.txt			01/06/1967			*
 exp-667988.txt		01/06/1967			*
 exp-676584.txt		02/06/1971			*
-exp-676584.txt		02/04/1973	
 "
 
 func get_logo():
@@ -181,8 +180,6 @@ Observação Sobre o Experimento: Dada a natureza discreta de Alexandre e a limi
 func get_relatorios():
 	return "Nome					Data					Acessivel
 rlt-1.txt		01/06/1967			*
-rlt-2.txt		02/06/1971			*
-rlt-3.txt		02/04/1973
 "
 
 

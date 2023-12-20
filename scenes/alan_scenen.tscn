@@ -1,4 +1,4 @@
-[gd_scene load_steps=84 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=90 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -37,7 +37,11 @@
 [ext_resource type="Texture2D" uid="uid://bjj53j0a4u6x1" path="res://images/4.png" id="32_htcr1"]
 [ext_resource type="Texture2D" uid="uid://j57yapjwrpxr" path="res://images/5.png" id="33_70f8m"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="40_mmk7w"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="41_j4bff"]
+[ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="42_ydmrs"]
 [ext_resource type="FontFile" uid="uid://cue24ja4k6cgd" path="res://Fonts/FiraCode-VariableFont_wght.ttf" id="43_2i4d2"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="43_t4xkq"]
 [ext_resource type="Script" path="res://Scripts/computers/bash.gd" id="43_u0xb0"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
@@ -510,6 +514,20 @@ shadow_mesh = SubResource("ArrayMesh_jo77u")
 [sub_resource type="Theme" id="Theme_0heex"]
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_qjv44")
 
+[sub_resource type="Curve3D" id="Curve3D_myu6m"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139, 0, 0, 0, 0, 0, 0, -4.15347, 5.34058e-05, 27.2753, 0, 0, 0, 0, 0, 0, -15.6443, 5.34058e-05, 37.2411, 0, 0, 0, 0, 0, 0, -29.2435, 5.34058e-05, 31.3381, 0, 0, 0, 0, 0, 0, -34.4985, 5.34058e-05, 45.893, 0, 0, 0, 0, 0, 0, -27.1316, 5.34058e-05, 54.291, 0, 0, 0, 0, 0, 0, -20.6381, 5.34058e-05, 62.3883, 0, 0, 0, 0, 0, 0, -12.4407, 5.34058e-05, 75.4685, 0, 0, 0, 0, 0, 0, -0.7066, 5.34058e-05, 85.3699, 0, 0, 0, 0, 0, 0, 18.8922, 5.34058e-05, 75.2646, 0, 0, 0, 0, 0, 0, 39.232, 5.34058e-05, 71.5204, 0, 0, 0, 0, 0, 0, 57.5206, 5.34058e-05, 60.964, 0, 0, 0, 0, 0, 0, 68.2311, 5.34058e-05, 41.2043, 0, 0, 0, 0, 0, 0, 71.0234, 5.34058e-05, 24.5803, 0, 0, 0, 0, 0, 0, 52.785, 5.34058e-05, 15.1262, 0, 0, 0, 0, 0, 0, 41.6164, 5.34058e-05, 7.12917, 0, 0, 0, 0, 0, 0, 27.5662, 5.34058e-05, 2.53634, 0, 0, 0, 0, 0, 0, 37.2062, 5.34058e-05, 24.9058, 0, 0, 0, 0, 0, 0, 34.9973, 5.34058e-05, 49.0579, 0, 0, 0, 0, 0, 0, 10.6161, 5.34058e-05, 55.3186, 0, 0, 0, 0, 0, 0, 0.575184, 5.34058e-05, 44.0461, 0, 0, 0, 0, 0, 0, 11.4162, 2.57646, 26.9941, 0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 23
+
+[sub_resource type="Curve3D" id="Curve3D_ikawg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836, 0, 0, 0, 0, 0, 0, 3.49119, 0.0209007, -26.2309, 0, 0, 0, 0, 0, 0, 13.2316, 0.0254555, -32.0046, 0, 0, 0, 0, 0, 0, 24.4843, 0.0248375, -31.2832, 0, 0, 0, 0, 0, 0, 34.0687, 0.0193138, -24.3903, 0, 0, 0, 0, 0, 0, 32.9173, 0.00445938, -5.73886, 0, 0, 0, 0, 0, 0, 21.1276, -0.00940323, 11.7262, 0, 0, 0, 0, 0, 0, 3.16512, -0.0216713, 27.2149, 0, 0, 0, 0, 0, 0, -21.8004, -0.0214272, 27.0156, 0, 0, 0, 0, 0, 0, -26.0257, -0.0316582, 39.8795, 0, 0, 0, 0, 0, 0, 5.88106, -0.0333672, 41.8976, 0, 0, 0, 0, 0, 0, 20.9459, -0.0267448, 33.5107, 0, 0, 0, 0, 0, 0, -9.95075, -0.012516, 15.7704, 0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 14
+
 [node name="AlanScenen" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -967,3 +985,31 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
+
+[node name="Trex" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Trex"]
+transform = Transform3D(0.325519, 0, -0.945536, 0, 1, 0, 0.945536, 0, 0.325519, 91.8041, 39.706, 11.7778)
+curve = SubResource("Curve3D_myu6m")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Trex/Path3D"]
+transform = Transform3D(-0.945536, 0, 0.32552, 0, 1, 0, -0.32552, 0, -0.945536, -0.319572, 5.34058e-05, 16.139)
+
+[node name="Trex" parent="Trex/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("40_mmk7w")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.33514e-05, 3.09005, 11.6872)
+script = ExtResource("41_j4bff")
+pathFollow3D = NodePath("..")
+
+[node name="Triceraptos" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Triceraptos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8719, 40.5547, 2.28858)
+curve = SubResource("Curve3D_ikawg")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Triceraptos/Path3D"]
+transform = Transform3D(0.961347, -0.000210726, -0.275342, 2.18279e-11, 1, -0.000765325, 0.275342, 0.000735743, 0.961346, -0.875832, 0.00876236, -10.9836)
+
+[node name="Triceratops" parent="Triceraptos/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("42_ydmrs")]
+transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, 0, 0, 0)
+script = ExtResource("43_t4xkq")
+pathFollow3D = NodePath("..")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=93 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=87 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
@@ -28,23 +28,17 @@
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
 [ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_bnbjg"]
-[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
+[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
-[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="31_6qqce"]
 [ext_resource type="Texture2D" uid="uid://cjtu2bqvq47m5" path="res://images/3.png" id="31_rncwb"]
-[ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="32_4htet"]
 [ext_resource type="Texture2D" uid="uid://bjj53j0a4u6x1" path="res://images/4.png" id="32_htcr1"]
 [ext_resource type="Texture2D" uid="uid://j57yapjwrpxr" path="res://images/5.png" id="33_70f8m"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="34_54rwb"]
-[ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="34_dffys"]
-[ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="35_1evo5"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="35_umx8y"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="38_evwut"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="40_pml2k"]
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="40_ghmn3"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="41_2a185"]
 [ext_resource type="FontFile" uid="uid://cue24ja4k6cgd" path="res://Fonts/FiraCode-VariableFont_wght.ttf" id="43_2i4d2"]
 [ext_resource type="Script" path="res://Scripts/computers/bash.gd" id="43_u0xb0"]
 
@@ -513,17 +507,17 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jo77u")
 
-[sub_resource type="Curve3D" id="Curve3D_kmqd4"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6957, 2.67029e-05, 12.2751, 0, 0, 0, 0, 0, 0, -16.0118, 2.67029e-05, -4.38343, 0, 0, 0, 0, 0, 0, -12.5287, 2.67029e-05, -13.8485, 0, 0, 0, 0, 0, 0, 7.15866, 2.67029e-05, -16.3473, 0, 0, 0, 0, 0, 0, 13.9735, 2.67029e-05, -10.6682, 0, 0, 0, 0, 0, 0, 4.7356, 2.67029e-05, 10.6092, 0, 0, 0, 0, 0, 0, -11.6957, 2.67029e-05, 12.2751),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 7
-
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjv44"]
 
 [sub_resource type="Theme" id="Theme_0heex"]
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_qjv44")
+
+[sub_resource type="Curve3D" id="Curve3D_aqv58"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139, 0, 0, 0, 0, 0, 0, -4.15347, 5.34058e-05, 27.2753, 0, 0, 0, 0, 0, 0, -15.6443, 5.34058e-05, 37.2411, 0, 0, 0, 0, 0, 0, -29.2435, 5.34058e-05, 31.3381, 0, 0, 0, 0, 0, 0, -34.4985, 5.34058e-05, 45.893, 0, 0, 0, 0, 0, 0, -27.1316, 5.34058e-05, 54.291, 0, 0, 0, 0, 0, 0, -20.6381, 5.34058e-05, 62.3883, 0, 0, 0, 0, 0, 0, -12.4407, 5.34058e-05, 75.4685, 0, 0, 0, 0, 0, 0, -0.7066, 5.34058e-05, 85.3699, 0, 0, 0, 0, 0, 0, 18.8922, 5.34058e-05, 75.2646, 0, 0, 0, 0, 0, 0, 39.232, 5.34058e-05, 71.5204, 0, 0, 0, 0, 0, 0, 57.5206, 5.34058e-05, 60.964, 0, 0, 0, 0, 0, 0, 68.2311, 5.34058e-05, 41.2043, 0, 0, 0, 0, 0, 0, 71.0234, 5.34058e-05, 24.5803, 0, 0, 0, 0, 0, 0, 52.785, 5.34058e-05, 15.1262, 0, 0, 0, 0, 0, 0, 41.6164, 5.34058e-05, 7.12917, 0, 0, 0, 0, 0, 0, 27.5662, 5.34058e-05, 2.53634, 0, 0, 0, 0, 0, 0, 37.2062, 5.34058e-05, 24.9058, 0, 0, 0, 0, 0, 0, 34.9973, 5.34058e-05, 49.0579, 0, 0, 0, 0, 0, 0, 10.6161, 5.34058e-05, 55.3186, 0, 0, 0, 0, 0, 0, 0.575184, 5.34058e-05, 44.0461, 0, 0, 0, 0, 0, 0, 11.4162, 2.57646, 26.9941, 0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 23
 
 [node name="AlanScenen" type="Node3D"]
 
@@ -916,32 +910,6 @@ skeleton = NodePath("")
 
 [node name="Control" parent="SubViewport" instance=ExtResource("31_2bu8m")]
 
-[node name="Dinossauros" type="Node" parent="."]
-
-[node name="Trex" parent="Dinossauros" instance=ExtResource("27_145to")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
-script = ExtResource("35_umx8y")
-
-[node name="Triceratops" parent="Dinossauros" instance=ExtResource("34_dffys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7777, 40.5547, -1.03649)
-script = ExtResource("38_evwut")
-
-[node name="Velociraptor" parent="Dinossauros" instance=ExtResource("35_1evo5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
-script = ExtResource("40_pml2k")
-
-[node name="Path3D" type="Path3D" parent="Dinossauros"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3912, 39.879, 0)
-curve = SubResource("Curve3D_kmqd4")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Dinossauros/Path3D"]
-transform = Transform3D(0.968035, 0, 0.250811, 0, 1, 0, -0.250811, 0, 0.968035, -11.6957, 2.67029e-05, 12.2751)
-
-[node name="Stegosaurus" parent="Dinossauros/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("32_4htet")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312392, 0.76804, 0.933543)
-script = ExtResource("34_54rwb")
-pathFollow3D = NodePath("..")
-
 [node name="Landscape" type="Node" parent="."]
 
 [node name="landscape-v19" parent="Landscape" instance=ExtResource("31_6qqce")]
@@ -1008,3 +976,17 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
+
+[node name="Trex" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Trex"]
+transform = Transform3D(0.325519, 0, -0.945536, 0, 1, 0, 0.945536, 0, 0.325519, 91.8041, 39.706, 11.7778)
+curve = SubResource("Curve3D_aqv58")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Trex/Path3D"]
+transform = Transform3D(-0.945536, 0, 0.32552, 0, 1, 0, -0.32552, 0, -0.945536, -0.319572, 5.34058e-05, 16.139)
+
+[node name="Trex" parent="Trex/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("40_ghmn3")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.33514e-05, 3.09005, 11.6872)
+script = ExtResource("41_2a185")
+pathFollow3D = NodePath("..")

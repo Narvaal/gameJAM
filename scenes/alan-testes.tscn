@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://cuswe2an13tkj"]
+[gd_scene load_steps=93 format=3 uid="uid://cuswe2an13tkj"]
 
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="1_awixj"]
 [ext_resource type="PackedScene" uid="uid://dakojgpbewarn" path="res://Blender-Models/BAKED/WALL_GROUND/UNBAKED_GROUND/ground.glb" id="2_fshha"]
@@ -543,6 +543,15 @@ _data = {
 }
 point_count = 23
 
+[sub_resource type="Curve3D" id="Curve3D_hlrdj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836, 0, 0, 0, 0, 0, 0, 3.49119, 0.0209007, -26.2309, 0, 0, 0, 0, 0, 0, 13.2316, 0.0254555, -32.0046, 0, 0, 0, 0, 0, 0, 24.4843, 0.0248375, -31.2832, 0, 0, 0, 0, 0, 0, 34.0687, 0.0193138, -24.3903, 0, 0, 0, 0, 0, 0, 32.9173, 0.00445938, -5.73886, 0, 0, 0, 0, 0, 0, 21.1276, -0.00940323, 11.7262, 0, 0, 0, 0, 0, 0, 3.16512, -0.0216713, 27.2149, 0, 0, 0, 0, 0, 0, -21.8004, -0.0214272, 27.0156, 0, 0, 0, 0, 0, 0, -26.0257, -0.0316582, 39.8795, 0, 0, 0, 0, 0, 0, 5.88106, -0.0333672, 41.8976, 0, 0, 0, 0, 0, 0, 20.9459, -0.0267448, 33.5107, 0, 0, 0, 0, 0, 0, -9.95075, -0.012516, 15.7704, 0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 14
+
+[sub_resource type="Curve3D" id="Curve3D_dqgvs"]
+
 [node name="AlanScenen" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -928,14 +937,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 44.6928, -9.75118)
 script = ExtResource("37_ms0sa")
 
-[node name="Velociraptor" parent="Dinossauros" instance=ExtResource("42_tk37y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
-script = ExtResource("43_fldka")
-
-[node name="Triceratops" parent="Dinossauros" instance=ExtResource("40_ponww")]
-transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, -56.8719, 40.5547, 2.28858)
-script = ExtResource("41_2nkmi")
-
 [node name="Landscape" type="Node" parent="."]
 
 [node name="landscape-v19" parent="Landscape" instance=ExtResource("44_igxri")]
@@ -963,9 +964,34 @@ transform = Transform3D(0.325519, 0, -0.945536, 0, 1, 0, 0.945536, 0, 0.325519, 
 curve = SubResource("Curve3D_etuls")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Trex/Path3D"]
-transform = Transform3D(-0.945536, 0, 0.325519, 0, 1, 0, -0.325519, 0, -0.945536, -0.319572, 5.34058e-05, 16.139)
+transform = Transform3D(-0.945536, 0, 0.32552, 0, 1, 0, -0.32552, 0, -0.945536, -0.319572, 5.34058e-05, 16.139)
 
 [node name="Trex" parent="Trex/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("38_sy66f")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.33514e-05, 3.09005, 11.6872)
 script = ExtResource("39_16jp3")
 pathFollow3D = NodePath("..")
+
+[node name="Triceraptos" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Triceraptos"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.8719, 40.5547, 2.28858)
+curve = SubResource("Curve3D_hlrdj")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Triceraptos/Path3D"]
+transform = Transform3D(0.961347, -0.000210726, -0.275342, 2.18279e-11, 1, -0.000765325, 0.275342, 0.000735743, 0.961346, -0.875832, 0.00876236, -10.9836)
+
+[node name="Triceratops" parent="Triceraptos/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("40_ponww")]
+transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, 0, 0, 0)
+script = ExtResource("41_2nkmi")
+pathFollow3D = NodePath("..")
+
+[node name="Velociraptor" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Velociraptor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
+curve = SubResource("Curve3D_dqgvs")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Velociraptor/Path3D"]
+
+[node name="Velociraptor" parent="Velociraptor/Path3D/PathFollow3D" instance=ExtResource("42_tk37y")]
+script = ExtResource("43_fldka")

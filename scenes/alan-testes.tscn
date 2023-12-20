@@ -1,51 +1,49 @@
-[gd_scene load_steps=91 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=87 format=3 uid="uid://cuswe2an13tkj"]
 
-[ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
-[ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
-[ext_resource type="PackedScene" uid="uid://dakojgpbewarn" path="res://Blender-Models/BAKED/WALL_GROUND/UNBAKED_GROUND/ground.glb" id="3_w73j7"]
-[ext_resource type="PackedScene" uid="uid://sdq4xwh0objm" path="res://Blender-Models/BAKED/COKEBOTTLE/coke.glb" id="4_rmfo0"]
-[ext_resource type="PackedScene" uid="uid://bfnc51hcq821p" path="res://Blender-Models/BAKED/PAPERS/papers_notes.glb" id="7_s508g"]
-[ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="9_3h0a8"]
-[ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="10_2iura"]
-[ext_resource type="PackedScene" uid="uid://ele24jyva0ec" path="res://Blender-Models/BAKED/TRASH/trash.glb" id="11_lk43m"]
-[ext_resource type="PackedScene" uid="uid://d2pnhih0pfjgu" path="res://Blender-Models/BAKED/DOOR/door.glb" id="12_ovjqd"]
-[ext_resource type="PackedScene" uid="uid://duu4ufogws8ip" path="res://scenes/Player/player.tscn" id="13_10ck6"]
-[ext_resource type="PackedScene" uid="uid://5lpm4w6lc2jr" path="res://Blender-Models/BAKED/CARPET/carpet.glb" id="14_jt8w2"]
-[ext_resource type="PackedScene" uid="uid://bch6yg6dbjxhc" path="res://Blender-Models/BAKED/TETO/teto.glb" id="15_ilfcn"]
-[ext_resource type="PackedScene" uid="uid://b4dvo4foxc83o" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="16_mleik"]
-[ext_resource type="PackedScene" uid="uid://cq70dunc4uq6" path="res://Blender-Models/BAKED/VIDEOTAPE/videotape.glb" id="17_cc7wg"]
-[ext_resource type="Script" path="res://Scripts/bed/bed_script.gd" id="17_om381"]
-[ext_resource type="PackedScene" uid="uid://ctmgvwwcic235" path="res://Blender-Models/BAKED/MINIBAR/minibar.glb" id="17_wr7rs"]
-[ext_resource type="Texture2D" uid="uid://bm7a7vc4xt5rj" path="res://Blender-Models/BAKED/BED/bed_bed_pillowtex.jpg" id="18_qx2lk"]
-[ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
-[ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
-[ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
-[ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
-[ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
-[ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
-[ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
-[ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
-[ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
-[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
-[ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
-[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
-[ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
-[ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
-[ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="31_6qqce"]
-[ext_resource type="Texture2D" uid="uid://cjtu2bqvq47m5" path="res://images/3.png" id="31_rncwb"]
-[ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="32_4htet"]
-[ext_resource type="Texture2D" uid="uid://bjj53j0a4u6x1" path="res://images/4.png" id="32_htcr1"]
-[ext_resource type="Texture2D" uid="uid://j57yapjwrpxr" path="res://images/5.png" id="33_70f8m"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="34_54rwb"]
-[ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="34_dffys"]
-[ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="35_1evo5"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="35_umx8y"]
-[ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="38_evwut"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="40_pml2k"]
-[ext_resource type="FontFile" uid="uid://cue24ja4k6cgd" path="res://Fonts/FiraCode-VariableFont_wght.ttf" id="43_2i4d2"]
-[ext_resource type="Script" path="res://Scripts/computers/bash.gd" id="43_u0xb0"]
+[ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="1_awixj"]
+[ext_resource type="PackedScene" uid="uid://dakojgpbewarn" path="res://Blender-Models/BAKED/WALL_GROUND/UNBAKED_GROUND/ground.glb" id="2_fshha"]
+[ext_resource type="PackedScene" uid="uid://sdq4xwh0objm" path="res://Blender-Models/BAKED/COKEBOTTLE/coke.glb" id="3_5cv52"]
+[ext_resource type="PackedScene" uid="uid://bfnc51hcq821p" path="res://Blender-Models/BAKED/PAPERS/papers_notes.glb" id="4_6c6a1"]
+[ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="5_6trqp"]
+[ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="6_gjybg"]
+[ext_resource type="PackedScene" uid="uid://ele24jyva0ec" path="res://Blender-Models/BAKED/TRASH/trash.glb" id="7_j36bm"]
+[ext_resource type="PackedScene" uid="uid://d2pnhih0pfjgu" path="res://Blender-Models/BAKED/DOOR/door.glb" id="8_mnpd4"]
+[ext_resource type="PackedScene" uid="uid://5lpm4w6lc2jr" path="res://Blender-Models/BAKED/CARPET/carpet.glb" id="9_sjiqu"]
+[ext_resource type="PackedScene" uid="uid://bch6yg6dbjxhc" path="res://Blender-Models/BAKED/TETO/teto.glb" id="10_63yxi"]
+[ext_resource type="PackedScene" uid="uid://b4dvo4foxc83o" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="11_h3rm5"]
+[ext_resource type="PackedScene" uid="uid://cq70dunc4uq6" path="res://Blender-Models/BAKED/VIDEOTAPE/videotape.glb" id="12_m6d6a"]
+[ext_resource type="PackedScene" uid="uid://ctmgvwwcic235" path="res://Blender-Models/BAKED/MINIBAR/minibar.glb" id="13_1jf7f"]
+[ext_resource type="Texture2D" uid="uid://bm7a7vc4xt5rj" path="res://Blender-Models/BAKED/BED/bed_bed_pillowtex.jpg" id="14_euvfh"]
+[ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="15_o4bvs"]
+[ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="16_mne1b"]
+[ext_resource type="Script" path="res://Scripts/bed/bed_script.gd" id="17_2at55"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="18_ksgov"]
+[ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="19_xkp5t"]
+[ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_onyq6"]
+[ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_8vj7s"]
+[ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_0gtfb"]
+[ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_cjmsj"]
+[ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="24_p12tt"]
+[ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="25_kydf0"]
+[ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_j0ogk"]
+[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_568wg"]
+[ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="28_thvj4"]
+[ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="29_cxbdk"]
+[ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_t8vst"]
+[ext_resource type="Texture2D" uid="uid://cjtu2bqvq47m5" path="res://images/3.png" id="31_l4qk1"]
+[ext_resource type="Texture2D" uid="uid://bjj53j0a4u6x1" path="res://images/4.png" id="32_piqqw"]
+[ext_resource type="Texture2D" uid="uid://j57yapjwrpxr" path="res://images/5.png" id="33_mx8yt"]
+[ext_resource type="PackedScene" uid="uid://duu4ufogws8ip" path="res://scenes/Player/player.tscn" id="34_c7cyq"]
+[ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="35_otcia"]
+[ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="36_r2e2i"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="37_ms0sa"]
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="38_sy66f"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="39_16jp3"]
+[ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="40_ponww"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="41_2nkmi"]
+[ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="42_tk37y"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="43_fldka"]
+[ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="44_igxri"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -69,7 +67,7 @@ density_texture = SubResource("NoiseTexture3D_n6aex")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6mxgi"]
 resource_name = "pillow"
 cull_mode = 2
-albedo_texture = ExtResource("18_qx2lk")
+albedo_texture = ExtResource("14_euvfh")
 roughness = 0.5
 uv1_scale = Vector3(-1.6, -1.6, 1)
 uv1_offset = Vector3(0, 2.6, 0)
@@ -77,7 +75,7 @@ uv1_offset = Vector3(0, 2.6, 0)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o4xg"]
 resource_name = "metal"
 cull_mode = 2
-albedo_texture = ExtResource("19_2m1oh")
+albedo_texture = ExtResource("15_o4bvs")
 metallic = 1.0
 roughness = 0.745614
 uv1_scale = Vector3(5.4, 5.4, 1)
@@ -86,7 +84,7 @@ uv1_offset = Vector3(0, -4.4, 0)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pthe4"]
 resource_name = "cochao"
 cull_mode = 2
-albedo_texture = ExtResource("20_oyxy3")
+albedo_texture = ExtResource("16_mne1b")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_qixap"]
@@ -175,7 +173,7 @@ data = PackedVector3Array(0.214925, -0.0116296, 0.158034, 0.255049, -0.0437637, 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kbm3e"]
 resource_name = "foam"
 cull_mode = 2
-albedo_texture = ExtResource("20_s1glp")
+albedo_texture = ExtResource("18_ksgov")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sqd0m"]
 resource_name = "plastic"
@@ -247,14 +245,14 @@ data = PackedVector3Array(-0.225573, 0.596518, 0.0559931, -0.240754, 0.0240366, 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r7iym"]
 resource_name = "table"
 cull_mode = 2
-albedo_texture = ExtResource("20_dm47j")
+albedo_texture = ExtResource("20_onyq6")
 metallic = 0.710526
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bruv"]
 resource_name = "textures"
 cull_mode = 2
-albedo_texture = ExtResource("21_dcbpg")
+albedo_texture = ExtResource("21_8vj7s")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xhrds"]
@@ -266,7 +264,7 @@ roughness = 0.429825
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yhigg"]
 resource_name = "hud"
 cull_mode = 2
-albedo_texture = ExtResource("22_sqwve")
+albedo_texture = ExtResource("22_0gtfb")
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_miidq"]
@@ -387,7 +385,7 @@ viewport_path = NodePath("Room/computer/screens/screen_3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6la2t"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uyij1"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xcq6x"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enmpu"]
@@ -512,11 +510,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jo77u")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjv44"]
-
-[sub_resource type="Theme" id="Theme_0heex"]
-LineEdit/styles/focus = SubResource("StyleBoxEmpty_qjv44")
-
 [node name="AlanScenen" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -529,49 +522,49 @@ material = SubResource("FogMaterial_34rqy")
 
 [node name="Room" type="Node" parent="."]
 
-[node name="corridor" parent="Room" instance=ExtResource("2_fw2iu")]
+[node name="corridor" parent="Room" instance=ExtResource("1_awixj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.406056, -16.3556, 1.08189)
 
-[node name="ground" parent="Room" instance=ExtResource("3_w73j7")]
+[node name="ground" parent="Room" instance=ExtResource("2_fshha")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.409, -16.3556, 1.075)
 
-[node name="coke" parent="Room" instance=ExtResource("4_rmfo0")]
+[node name="coke" parent="Room" instance=ExtResource("3_5cv52")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.726, -17.1366, -0.063)
 
-[node name="coke" parent="Room/coke" instance=ExtResource("4_rmfo0")]
+[node name="coke" parent="Room/coke" instance=ExtResource("3_5cv52")]
 transform = Transform3D(-3.99323e-08, -0.913545, 0.406737, 1, -4.37114e-08, 0, 1.7779e-08, 0.406737, 0.913545, 1.274, 3.549, -0.063)
 
-[node name="coke2" parent="Room/coke" instance=ExtResource("4_rmfo0")]
+[node name="coke2" parent="Room/coke" instance=ExtResource("3_5cv52")]
 transform = Transform3D(0.22159, 0.725488, 0.651587, -0.90934, -0.0875594, 0.406737, 0.352135, -0.682643, 0.640312, 2.47302, -0.424713, 1.32295)
 
-[node name="papers_notes" parent="Room" instance=ExtResource("7_s508g")]
+[node name="papers_notes" parent="Room" instance=ExtResource("4_6c6a1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.25779, -16.3556, 0.509187)
 
-[node name="TOILET_PAPER" parent="Room" instance=ExtResource("9_3h0a8")]
+[node name="TOILET_PAPER" parent="Room" instance=ExtResource("5_6trqp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.378891, -16.36, 1.09415)
 
-[node name="TOWEL" parent="Room" instance=ExtResource("10_2iura")]
+[node name="TOWEL" parent="Room" instance=ExtResource("6_gjybg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.449925, -16.3556, 1.06189)
 
-[node name="trash" parent="Room" instance=ExtResource("11_lk43m")]
+[node name="trash" parent="Room" instance=ExtResource("7_j36bm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441, -16.3556, 1.1)
 
-[node name="door" parent="Room" instance=ExtResource("12_ovjqd")]
+[node name="door" parent="Room" instance=ExtResource("8_mnpd4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323, -16.3556, 1.08)
 
-[node name="carpet2" parent="Room" instance=ExtResource("14_jt8w2")]
+[node name="carpet2" parent="Room" instance=ExtResource("9_sjiqu")]
 transform = Transform3D(0.997564, 0, 0.0697565, 0, 1, 0, -0.0697565, 0, 0.997564, -0.17, -16.3556, 0.885)
 
-[node name="teto" parent="Room" instance=ExtResource("15_ilfcn")]
+[node name="teto" parent="Room" instance=ExtResource("10_63yxi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.414, -16.3556, 1.073)
 
-[node name="walltable" parent="Room" instance=ExtResource("16_mleik")]
+[node name="walltable" parent="Room" instance=ExtResource("11_h3rm5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416676, -16.7145, 1.13512)
 
-[node name="videotape" parent="Room" instance=ExtResource("17_cc7wg")]
+[node name="videotape" parent="Room" instance=ExtResource("12_m6d6a")]
 transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 1.64497, -16.2707, -2.85668)
 
-[node name="minibar" parent="Room" instance=ExtResource("17_wr7rs")]
+[node name="minibar" parent="Room" instance=ExtResource("13_1jf7f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459193, -16.3556, 1.16956)
 
 [node name="bed" type="MeshInstance3D" parent="Room"]
@@ -581,8 +574,7 @@ skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/bed"]
 transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, -0.00832844, 0.00865787, 0.00829291)
-script = ExtResource("17_om381")
-prompt_message = "[E] Dormir  [F] Esconder"
+script = ExtResource("17_2at55")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/bed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6ajaf")
@@ -594,14 +586,12 @@ transform = Transform3D(-0.82486, -9.80157e-08, 0.133214, -0.0706933, 0.70819, -
 transform = Transform3D(-0.637246, 0, 0.540424, 0, 0.835548, 0, -0.540424, 0, -0.637246, 0.161294, -0.318931, -0.158515)
 
 [node name="chair" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.996174, 0, 0.0873894, 0, 1, 0, -0.0873894, 0, 0.996174, 0.461873, -15.6208, -4.08196)
+transform = Transform3D(0.684758, 0, 0.728771, 0, 1, 0, -0.728771, 0, 0.684758, 0.665746, -15.6208, -3.58442)
 mesh = SubResource("ArrayMesh_tnul0")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/chair"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
-script = ExtResource("2_4vl82")
-prompt_message = "[E] Sentar/Levantar"
+script = ExtResource("19_xkp5t")
 pos = Vector3(0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/chair/StaticBody3D"]
@@ -624,8 +614,7 @@ shape = SubResource("ConcavePolygonShape3D_0itb2")
 transform = Transform3D(0.817117, 0.0174483, 0.130888, -0.00783374, 0.514574, -0.177521, -0.111534, 0.0916882, 0.97138, -0.814776, 1.17524, 0.206207)
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_left" node_paths=PackedStringArray("selected_screen")]
-script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+script = ExtResource("23_cjmsj")
 selected_screen = NodePath("../../screens/screen_1")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_left/screen_body"]
@@ -640,8 +629,7 @@ texture = SubResource("ViewportTexture_wth1o")
 transform = Transform3D(0.806999, 0, 0, 0, 0.453323, -0.456214, 0, 0.181821, 1.13745, -0.00259009, 1.78018, 0.312428)
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_middle_top" node_paths=PackedStringArray("selected_screen")]
-script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+script = ExtResource("23_cjmsj")
 selected_screen = NodePath("../../screens/screen_2")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_middle_top/screen_body"]
@@ -656,8 +644,7 @@ texture = SubResource("ViewportTexture_wabwr")
 transform = Transform3D(0.837576, -0.00716121, -0.0854255, -0.00636011, 0.470056, -0.0759692, 0.134901, 0.0666239, 0.526808, 0.816394, 1.19348, 0.216783)
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_right" node_paths=PackedStringArray("selected_screen")]
-script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+script = ExtResource("23_cjmsj")
 selected_screen = NodePath("../../screens/screen_3")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_right/screen_body"]
@@ -672,8 +659,7 @@ texture = SubResource("ViewportTexture_jg1gv")
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_middle"]
 transform = Transform3D(0.0997424, 0, 0, 0, 0.082933, 0.0207633, 0, -0.0193342, 0.0890632, -0.0027889, 1.11483, 0.178145)
-script = ExtResource("27_3qaib")
-prompt_message = "[E] Abrir console"
+script = ExtResource("24_p12tt")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_middle/screen_body"]
 transform = Transform3D(4.56095, 0, 0, 0, 4.81489, 5.96046e-08, 0, -1.19209e-07, 1.64156, -0.124746, 0, 0)
@@ -681,7 +667,7 @@ shape = SubResource("BoxShape3D_6la2t")
 
 [node name="screen_image" type="Sprite3D" parent="Room/computer/computer_screen_middle/screen_body/screen_colision"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 2.23517e-08, 0, 2.98023e-08, 1, 0.0102198, 0.0195618, 0.0124588)
-texture = SubResource("ViewportTexture_uyij1")
+texture = SubResource("ViewportTexture_xcq6x")
 
 [node name="screens" type="Control" parent="Room/computer"]
 layout_mode = 3
@@ -701,7 +687,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1546, -0.151423, 19.2944)
 
 [node name="Camera1" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
 transform = Transform3D(-0.770747, 0, -0.637142, 0, 1, 0, 0.637142, 0, -0.770747, -27.585, 49.4564, -43.0603)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 value_moved = 0.1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_1/cams/Camera1"]
@@ -710,7 +696,7 @@ mesh = SubResource("BoxMesh_qmi0u")
 
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
 transform = Transform3D(0.999146, -0.0369889, 0.0184368, 0.032959, 0.982272, 0.184541, -0.0249359, -0.183775, 0.982652, 48.1776, 57.2157, 76.2843)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_1/cams/Camera2"]
 transform = Transform3D(1, 0, 9.31323e-10, 0, 1, 0, -9.31323e-10, 0, 1, -0.00736284, 0, 0.53379)
@@ -718,7 +704,7 @@ mesh = SubResource("BoxMesh_wjxtw")
 
 [node name="Camera3" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
 transform = Transform3D(-0.0265136, -0.30812, 0.950978, -0.00858717, 0.951347, 0.308001, -0.999612, 0, -0.0278695, 127.671, 75.1717, -26.946)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_1/cams/Camera3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00575829, 0, 0.834454)
@@ -736,7 +722,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.3009)
 
 [node name="Camera1" type="Camera3D" parent="Room/computer/screens/screen_2/cams"]
 transform = Transform3D(0.142081, 0.222805, -0.964454, 0.00961587, 0.973982, 0.226423, 0.989808, -0.0414443, 0.136241, -69.5729, 54.7942, 21.1208)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 value_moved = 0.1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_2/cams/Camera1"]
@@ -745,7 +731,7 @@ mesh = SubResource("BoxMesh_qmi0u")
 
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_2/cams"]
 transform = Transform3D(0.458352, -0.323845, 0.82767, -0.0732322, 0.914325, 0.398306, -0.885749, -0.243176, 0.395367, 93.5516, 85.8027, 34.8233)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_2/cams/Camera2"]
 transform = Transform3D(1, 0, 9.31323e-10, 0, 1, 0, -9.31323e-10, 0, 1, -0.00736284, 0, 0.53379)
@@ -763,7 +749,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.12541)
 
 [node name="Camera1" type="Camera3D" parent="Room/computer/screens/screen_3/cams"]
 transform = Transform3D(0.00659658, 0.290602, -0.956821, -0.00200344, 0.956844, 0.290595, 0.999976, 3.49254e-10, 0.0068941, -48.6693, 84.0602, 26.1044)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 value_moved = 0.1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_3/cams/Camera1"]
@@ -772,13 +758,13 @@ mesh = SubResource("BoxMesh_qmi0u")
 
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_3/cams"]
 transform = Transform3D(-0.843799, 0.0641456, 0.532812, 0.0766821, 0.997055, 0.00140315, -0.531153, 0.0420411, -0.846232, 58.5715, 52.6453, -33.5911)
-script = ExtResource("24_oqnrs")
+script = ExtResource("25_kydf0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_3/cams/Camera2"]
 transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736284, 0, 0.53379)
 mesh = SubResource("BoxMesh_wjxtw")
 
-[node name="AK47" parent="Room" instance=ExtResource("26_1efwb")]
+[node name="AK47" parent="Room" instance=ExtResource("26_j0ogk")]
 transform = Transform3D(0.0954261, 0.0298974, 0, 0, 0, -0.1, -0.0298974, 0.0954261, 0, -2.25176, -16.3737, -3.54819)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/AK47"]
@@ -788,18 +774,17 @@ transform = Transform3D(0.986432, 0.16417, 0, -0.164169, 0.986431, 0, 0, 0, 1, 0
 transform = Transform3D(-0.359461, -8.09133, -0.0162562, 2.36287, -1.21753, -0.066146, 0.149828, -0.211191, 1.00416, 0, 0, 0)
 shape = SubResource("BoxShape3D_s5f0f")
 
-[node name="enemy" parent="Room" instance=ExtResource("27_0trq7")]
+[node name="enemy" parent="Room" instance=ExtResource("27_568wg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1272, -17.1284, -9.76388)
 
-[node name="TOILET_PEE" parent="Room" instance=ExtResource("37_1rm5h")]
+[node name="TOILET_PEE" parent="Room" instance=ExtResource("28_thvj4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)
 
 [node name="nota" type="Node3D" parent="Room"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.10977, -16.3202, -1.8129)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota"]
-script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
+script = ExtResource("29_cxbdk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -807,14 +792,13 @@ shape = SubResource("BoxShape3D_d3ohm")
 
 [node name="Sprite3D" type="Sprite3D" parent="Room/nota/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-texture = ExtResource("30_w8pgi")
+texture = ExtResource("30_t8vst")
 
 [node name="nota2" type="Node3D" parent="Room"]
-transform = Transform3D(0.000226218, 0, -0.0599996, 0, 0.018, 0, 0.0599996, 0, 0.000226218, -0.263973, -15.5723, -4.21854)
+transform = Transform3D(-0.0704436, 0, -0.0709768, 0, 0.1, 0, 0.0709768, 0, -0.0704436, 0.484885, -15.7041, -3.78521)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota2"]
-script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
+script = ExtResource("29_cxbdk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota2/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -822,14 +806,13 @@ shape = SubResource("BoxShape3D_d3ohm")
 
 [node name="Sprite3D" type="Sprite3D" parent="Room/nota2/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-texture = ExtResource("31_rncwb")
+texture = ExtResource("31_l4qk1")
 
 [node name="nota3" type="Node3D" parent="Room"]
 transform = Transform3D(0.0986603, 0, 0.0163137, 0, 0.1, 0, -0.0163137, 0, 0.0986603, -3.11783, -16.3337, -1.82158)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota3"]
-script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
+script = ExtResource("29_cxbdk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota3/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -837,14 +820,13 @@ shape = SubResource("BoxShape3D_d3ohm")
 
 [node name="Sprite3D" type="Sprite3D" parent="Room/nota3/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-texture = ExtResource("32_htcr1")
+texture = ExtResource("32_piqqw")
 
 [node name="nota4" type="Node3D" parent="Room"]
 transform = Transform3D(0.0986603, 0, 0.0163137, 0, 0.1, 0, -0.0163137, 0, 0.0986603, -3.11783, -15.5242, -0.632977)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota4"]
-script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
+script = ExtResource("29_cxbdk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota4/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -852,7 +834,7 @@ shape = SubResource("BoxShape3D_d3ohm")
 
 [node name="Sprite3D" type="Sprite3D" parent="Room/nota4/StaticBody3D/CollisionShape3D"]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
-texture = ExtResource("33_70f8m")
+texture = ExtResource("33_mx8yt")
 
 [node name="Light" type="Node" parent="."]
 
@@ -874,16 +856,15 @@ light_energy = 0.4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05654, -14.0196, -2.345)
 light_energy = 0.2
 
-[node name="Player" parent="." instance=ExtResource("13_10ck6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962778, -16.4732, -2.22851)
+[node name="Player" parent="." instance=ExtResource("34_c7cyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.188911, -16.4642, -3.53191)
 speed = 2.5
 jump_force = 0.0
 
 [node name="screen_player" type="StaticBody3D" parent="Player" node_paths=PackedStringArray("selected_screen")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47069, -0.659529)
 collision_layer = 4
-script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Largar Tablet"
+script = ExtResource("23_cjmsj")
 selected_screen = NodePath("../../Room/computer/screens/screen_2")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Player/screen_player"]
@@ -902,89 +883,27 @@ skeleton = NodePath("")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 
-[node name="Control" parent="SubViewport" instance=ExtResource("31_2bu8m")]
+[node name="Control" parent="SubViewport" instance=ExtResource("35_otcia")]
 
 [node name="Dinossauros" type="Node" parent="."]
 
-[node name="Stegosaurus" parent="Dinossauros" instance=ExtResource("32_4htet")]
+[node name="Stegosaurus" parent="Dinossauros" instance=ExtResource("36_r2e2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 44.6928, -9.75118)
-script = ExtResource("34_54rwb")
+script = ExtResource("37_ms0sa")
 
-[node name="Trex" parent="Dinossauros" instance=ExtResource("27_145to")]
+[node name="Trex" parent="Dinossauros" instance=ExtResource("38_sy66f")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
-script = ExtResource("35_umx8y")
+script = ExtResource("39_16jp3")
 
-[node name="Triceratops" parent="Dinossauros" instance=ExtResource("34_dffys")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7777, 40.5547, -1.03649)
-script = ExtResource("38_evwut")
-
-[node name="Velociraptor" parent="Dinossauros" instance=ExtResource("35_1evo5")]
+[node name="Velociraptor" parent="Dinossauros" instance=ExtResource("42_tk37y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
-script = ExtResource("40_pml2k")
+script = ExtResource("43_fldka")
+
+[node name="Triceratops" parent="Dinossauros" instance=ExtResource("40_ponww")]
+transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, -56.8719, 40.5547, 2.28858)
+script = ExtResource("41_2nkmi")
 
 [node name="Landscape" type="Node" parent="."]
 
-[node name="landscape-v19" parent="Landscape" instance=ExtResource("31_6qqce")]
+[node name="landscape-v19" parent="Landscape" instance=ExtResource("44_igxri")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.875, 0)
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("43_u0xb0")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(1920, 1080)
-render_target_clear_mode = 2
-render_target_update_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/SubViewportContainer/SubViewport"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="PanelContainer" type="PanelContainer" parent="Control/SubViewportContainer/SubViewport/MarginContainer"]
-layout_mode = 2
-
-[node name="VSplitContainer" type="VSplitContainer" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer"]
-layout_mode = 2
-dragger_visibility = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer"]
-custom_minimum_size = Vector2(0, 1040)
-layout_mode = 2
-color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect"]
-custom_minimum_size = Vector2(1920, 1040)
-layout_mode = 0
-theme_override_fonts/normal_font = ExtResource("43_2i4d2")
-bbcode_enabled = true
-scroll_following = true
-
-[node name="ColorRect2" type="ColorRect" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer"]
-layout_mode = 2
-color = Color(0.180392, 0.180392, 0.180392, 1)
-
-[node name="LineEdit" type="LineEdit" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2"]
-custom_minimum_size = Vector2(1920, 40)
-layout_mode = 0
-theme = SubResource("Theme_0heex")
-theme_override_fonts/font = ExtResource("43_2i4d2")
-max_length = 20
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-virtual_keyboard_type = 6
-shortcut_keys_enabled = false
-middle_mouse_paste_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-caret_blink = true

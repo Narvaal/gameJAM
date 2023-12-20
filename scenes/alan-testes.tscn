@@ -17,7 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="15_o4bvs"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="16_mne1b"]
 [ext_resource type="Script" path="res://Scripts/bed/bed_script.gd" id="17_2at55"]
-[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="18_ksgov"]
+[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="18_ksgov"]
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="19_xkp5t"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_onyq6"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_8vj7s"]
@@ -27,7 +27,7 @@
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="25_kydf0"]
 [ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_5b45r"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_j0ogk"]
-[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_568wg"]
+[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_568wg"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="28_thvj4"]
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="29_cxbdk"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_t8vst"]
@@ -46,6 +46,8 @@
 [ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="43_fldka"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="44_igxri"]
 [ext_resource type="Shader" path="res://pathscripts/crt.gdshader" id="45_t2dav"]
+
+[ext_resource type="PackedScene" path="res://pathscenes/trex.tscn" id="45_w1i7b"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1

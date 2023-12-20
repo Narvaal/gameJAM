@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=89 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -34,9 +34,13 @@
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="31_6qqce"]
 [ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="32_4htet"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="34_54rwb"]
 [ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="34_dffys"]
 [ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="35_1evo5"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="35_umx8y"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="38_evwut"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="40_pml2k"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -867,17 +871,25 @@ skeleton = NodePath("")
 
 [node name="Control" parent="SubViewport" instance=ExtResource("31_2bu8m")]
 
-[node name="landscape-v19" parent="." instance=ExtResource("31_6qqce")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.875, 0)
+[node name="Dinossauros" type="Node" parent="."]
 
-[node name="Stegosaurus" parent="." instance=ExtResource("32_4htet")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9248, 39.875, 64.9208)
+[node name="Stegosaurus" parent="Dinossauros" instance=ExtResource("32_4htet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9248, 53.5111, 64.9208)
+script = ExtResource("34_54rwb")
 
-[node name="Trex" parent="." instance=ExtResource("27_145to")]
+[node name="Trex" parent="Dinossauros" instance=ExtResource("27_145to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
+script = ExtResource("35_umx8y")
 
-[node name="Triceratops" parent="." instance=ExtResource("34_dffys")]
+[node name="Triceratops" parent="Dinossauros" instance=ExtResource("34_dffys")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7777, 40.5547, -1.03649)
+script = ExtResource("38_evwut")
 
-[node name="Velociraptor" parent="." instance=ExtResource("35_1evo5")]
+[node name="Velociraptor" parent="Dinossauros" instance=ExtResource("35_1evo5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
+script = ExtResource("40_pml2k")
+
+[node name="Landscape" type="Node" parent="."]
+
+[node name="landscape-v19" parent="Landscape" instance=ExtResource("31_6qqce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.875, 0)

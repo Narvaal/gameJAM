@@ -2,17 +2,18 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://en6bmcsa4n6t"
-path.s3tc="res://.godot/imported/Material_baseColor.jpeg-91b99621cc9241c79ffb623e2ac777f9.s3tc.ctex"
+uid="uid://de40hhnj7emf1"
+path.s3tc="res://.godot/imported/freezernote_Inserir um pouquinho de texto.png-20acf07f332b7519f3066425249359a0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/INEMYY/textures/Material_baseColor.jpeg"
-dest_files=["res://.godot/imported/Material_baseColor.jpeg-91b99621cc9241c79ffb623e2ac777f9.s3tc.ctex"]
+source_file="res://Blender-Models/BAKED/FREEZERNOTE/freezernote_Inserir um pouquinho de texto.png"
+dest_files=["res://.godot/imported/freezernote_Inserir um pouquinho de texto.png-20acf07f332b7519f3066425249359a0.s3tc.ctex"]
 
 [params]
 

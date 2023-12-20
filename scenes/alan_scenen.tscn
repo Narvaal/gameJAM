@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=113 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://sdq4xwh0objm" path="res://Blender-Models/BAKED/COKEBOTTLE/coke.glb" id="4_rmfo0"]
 [ext_resource type="PackedScene" uid="uid://bfnc51hcq821p" path="res://Blender-Models/BAKED/PAPERS/papers_notes.glb" id="7_s508g"]
 [ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="9_3h0a8"]
-[ext_resource type="AudioStream" uid="uid://uorvxj3twm2r" path="res://Songs/426422__devern__closing-noisy-metal-door.wav" id="9_mw0di"]
+[ext_resource type="AudioStream" uid="uid://0pdjecc8ijxj" path="res://Songs/doorclose.mp3" id="9_npguf"]
 [ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="10_2iura"]
 [ext_resource type="PackedScene" uid="uid://ele24jyva0ec" path="res://Blender-Models/BAKED/TRASH/trash.glb" id="11_lk43m"]
 [ext_resource type="PackedScene" uid="uid://d2pnhih0pfjgu" path="res://Blender-Models/BAKED/DOOR/door.glb" id="12_ovjqd"]
@@ -58,6 +58,8 @@
 [ext_resource type="Shader" path="res://pathscripts/crt.gdshader" id="44_qnn6i"]
 [ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="57_exeyi"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="58_ow62p"]
+[ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="59_o2yic"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="60_fnyst"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -550,20 +552,6 @@ shadow_mesh = SubResource("ArrayMesh_jo77u")
 [sub_resource type="Theme" id="Theme_0heex"]
 LineEdit/styles/focus = SubResource("StyleBoxEmpty_qjv44")
 
-[sub_resource type="Curve3D" id="Curve3D_myu6m"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139, 0, 0, 0, 0, 0, 0, -4.15347, 5.34058e-05, 27.2753, 0, 0, 0, 0, 0, 0, -15.6443, 5.34058e-05, 37.2411, 0, 0, 0, 0, 0, 0, -29.2435, 5.34058e-05, 31.3381, 0, 0, 0, 0, 0, 0, -34.4985, 5.34058e-05, 45.893, 0, 0, 0, 0, 0, 0, -27.1316, 5.34058e-05, 54.291, 0, 0, 0, 0, 0, 0, -20.6381, 5.34058e-05, 62.3883, 0, 0, 0, 0, 0, 0, -12.4407, 5.34058e-05, 75.4685, 0, 0, 0, 0, 0, 0, -0.7066, 5.34058e-05, 85.3699, 0, 0, 0, 0, 0, 0, 18.8922, 5.34058e-05, 75.2646, 0, 0, 0, 0, 0, 0, 39.232, 5.34058e-05, 71.5204, 0, 0, 0, 0, 0, 0, 57.5206, 5.34058e-05, 60.964, 0, 0, 0, 0, 0, 0, 68.2311, 5.34058e-05, 41.2043, 0, 0, 0, 0, 0, 0, 71.0234, 5.34058e-05, 24.5803, 0, 0, 0, 0, 0, 0, 52.785, 5.34058e-05, 15.1262, 0, 0, 0, 0, 0, 0, 41.6164, 5.34058e-05, 7.12917, 0, 0, 0, 0, 0, 0, 27.5662, 5.34058e-05, 2.53634, 0, 0, 0, 0, 0, 0, 37.2062, 5.34058e-05, 24.9058, 0, 0, 0, 0, 0, 0, 34.9973, 5.34058e-05, 49.0579, 0, 0, 0, 0, 0, 0, 10.6161, 5.34058e-05, 55.3186, 0, 0, 0, 0, 0, 0, 0.575184, 5.34058e-05, 44.0461, 0, 0, 0, 0, 0, 0, 11.4162, 2.57646, 26.9941, 0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 23
-
-[sub_resource type="Curve3D" id="Curve3D_ikawg"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836, 0, 0, 0, 0, 0, 0, 3.49119, 0.0209007, -26.2309, 0, 0, 0, 0, 0, 0, 13.2316, 0.0254555, -32.0046, 0, 0, 0, 0, 0, 0, 24.4843, 0.0248375, -31.2832, 0, 0, 0, 0, 0, 0, 34.0687, 0.0193138, -24.3903, 0, 0, 0, 0, 0, 0, 32.9173, 0.00445938, -5.73886, 0, 0, 0, 0, 0, 0, 21.1276, -0.00940323, 11.7262, 0, 0, 0, 0, 0, 0, 3.16512, -0.0216713, 27.2149, 0, 0, 0, 0, 0, 0, -21.8004, -0.0214272, 27.0156, 0, 0, 0, 0, 0, 0, -26.0257, -0.0316582, 39.8795, 0, 0, 0, 0, 0, 0, 5.88106, -0.0333672, 41.8976, 0, 0, 0, 0, 0, 0, 20.9459, -0.0267448, 33.5107, 0, 0, 0, 0, 0, 0, -9.95075, -0.012516, 15.7704, 0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-}
-point_count = 14
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m2i78"]
 shader = ExtResource("44_qnn6i")
 shader_parameter/overlay = false
@@ -588,6 +576,20 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.25
 shader_parameter/vignette_opacity = 0.25
 
+[sub_resource type="Curve3D" id="Curve3D_myu6m"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139, 0, 0, 0, 0, 0, 0, -4.15347, 5.34058e-05, 27.2753, 0, 0, 0, 0, 0, 0, -15.6443, 5.34058e-05, 37.2411, 0, 0, 0, 0, 0, 0, -29.2435, 5.34058e-05, 31.3381, 0, 0, 0, 0, 0, 0, -34.4985, 5.34058e-05, 45.893, 0, 0, 0, 0, 0, 0, -27.1316, 5.34058e-05, 54.291, 0, 0, 0, 0, 0, 0, -20.6381, 5.34058e-05, 62.3883, 0, 0, 0, 0, 0, 0, -12.4407, 5.34058e-05, 75.4685, 0, 0, 0, 0, 0, 0, -0.7066, 5.34058e-05, 85.3699, 0, 0, 0, 0, 0, 0, 18.8922, 5.34058e-05, 75.2646, 0, 0, 0, 0, 0, 0, 39.232, 5.34058e-05, 71.5204, 0, 0, 0, 0, 0, 0, 57.5206, 5.34058e-05, 60.964, 0, 0, 0, 0, 0, 0, 68.2311, 5.34058e-05, 41.2043, 0, 0, 0, 0, 0, 0, 71.0234, 5.34058e-05, 24.5803, 0, 0, 0, 0, 0, 0, 52.785, 5.34058e-05, 15.1262, 0, 0, 0, 0, 0, 0, 41.6164, 5.34058e-05, 7.12917, 0, 0, 0, 0, 0, 0, 27.5662, 5.34058e-05, 2.53634, 0, 0, 0, 0, 0, 0, 37.2062, 5.34058e-05, 24.9058, 0, 0, 0, 0, 0, 0, 34.9973, 5.34058e-05, 49.0579, 0, 0, 0, 0, 0, 0, 10.6161, 5.34058e-05, 55.3186, 0, 0, 0, 0, 0, 0, 0.575184, 5.34058e-05, 44.0461, 0, 0, 0, 0, 0, 0, 11.4162, 2.57646, 26.9941, 0, 0, 0, 0, 0, 0, -0.319572, 5.34058e-05, 16.139),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 23
+
+[sub_resource type="Curve3D" id="Curve3D_ikawg"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836, 0, 0, 0, 0, 0, 0, 3.49119, 0.0209007, -26.2309, 0, 0, 0, 0, 0, 0, 13.2316, 0.0254555, -32.0046, 0, 0, 0, 0, 0, 0, 24.4843, 0.0248375, -31.2832, 0, 0, 0, 0, 0, 0, 34.0687, 0.0193138, -24.3903, 0, 0, 0, 0, 0, 0, 32.9173, 0.00445938, -5.73886, 0, 0, 0, 0, 0, 0, 21.1276, -0.00940323, 11.7262, 0, 0, 0, 0, 0, 0, 3.16512, -0.0216713, 27.2149, 0, 0, 0, 0, 0, 0, -21.8004, -0.0214272, 27.0156, 0, 0, 0, 0, 0, 0, -26.0257, -0.0316582, 39.8795, 0, 0, 0, 0, 0, 0, 5.88106, -0.0333672, 41.8976, 0, 0, 0, 0, 0, 0, 20.9459, -0.0267448, 33.5107, 0, 0, 0, 0, 0, 0, -9.95075, -0.012516, 15.7704, 0, 0, 0, 0, 0, 0, -0.875832, 0.00876236, -10.9836),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 14
+
 [sub_resource type="Curve3D" id="Curve3D_1sv4n"]
 _data = {
 "points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.1433, 3.8147e-05, 3.95912, 0, 0, 0, 0, 0, 0, -11.5922, 3.8147e-05, 19.8823, 0, 0, 0, 0, 0, 0, -21.566, 3.8147e-05, 24.4317, 0, 0, 0, 0, 0, 0, -25.4156, 3.8147e-05, 34.4056, 0, 0, 0, 0, 0, 0, -18.7664, 3.8147e-05, 57.6779, 0, 0, 0, 0, 0, 0, -34.8645, 3.8147e-05, 73.776, 0, 0, 0, 0, 0, 0, -34.2363, 3.8147e-05, 88.1911, 0, 0, 0, 0, 0, 0, -12.7138, 3.8147e-05, 92.7406, 0, 0, 0, 0, 0, 0, 20.6813, 3.8147e-05, 92.7355, 0, 0, 0, 0, 0, 0, 43.6037, 3.8147e-05, 96.2351, 0, 0, 0, 0, 0, 0, 56.0272, 3.8147e-05, 88.186, 0, 0, 0, 0, 0, 0, 51.1278, 3.8147e-05, 68.2383, 0, 0, 0, 0, 0, 0, 45.8784, 3.8147e-05, 54.065, 0, 0, 0, 0, 0, 0, 56.7271, 3.8147e-05, 44.0911, 0, 0, 0, 0, 0, 0, 74.2442, 3.8147e-05, 56.7127, 0, 0, 0, 0, 0, 0, 89.4675, 3.8147e-05, 67.0365, 0, 0, 0, 0, 0, 0, 105.916, 3.8147e-05, 41.3145, 0, 0, 0, 0, 0, 0, 81.7683, 3.8147e-05, 20.4919, 0, 0, 0, 0, 0, 0, 67.42, 3.8147e-05, 8.06836, 0, 0, 0, 0, 0, 0, 70.4532, 3.8147e-05, -6.20965, 0, 0, 0, 0, 0, 0, 86.3763, 3.8147e-05, -22.3078, 0, 0, 0, 0, 0, 0, 90.0509, 3.8147e-05, -45.93, 0, 0, 0, 0, 0, 0, 77.2774, 3.8147e-05, -60.8033, 0, 0, 0, 0, 0, 0, 76.9086, 3.8147e-05, -78.7919, 0, 0, 0, 0, 0, 0, 87.5823, 3.8147e-05, -95.59, 0, 0, 0, 0, 0, 0, 55.3861, 3.8147e-05, -78.9669, 0, 0, 0, 0, 0, 0, 34.1589, 3.8147e-05, -70.9311, 0, 0, 0, 0, 0, 0, 10.1864, 3.8147e-05, -76.8804, 0, 0, 0, 0, 0, 0, -5.38678, 3.8147e-05, -79.8551, 0, 0, 0, 0, 0, 0, -6.0867, 3.8147e-05, -63.407, 0, 0, 0, 0, 0, 0, 14.036, 3.8147e-05, -49.2336, 0, 0, 0, 0, 0, 0, 15.036, 3.8147e-05, -36.5895, 0, 0, 0, 0, 0, 0, 7.51191, 3.8147e-05, -24.3409, 0, 0, 0, 0, 0, 0, 5.23718, 3.8147e-05, -17.6917, 0, 0, 0, 0, 0, 0, -2.1433, 3.8147e-05, 3.95912),
@@ -601,6 +603,8 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 23
+
+[sub_resource type="Curve3D" id="Curve3D_3cvcd"]
 
 [node name="AlanScenen" type="Node3D"]
 
@@ -646,8 +650,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323, -16.3556, 1.08)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25202, 0.959644, -3.17037)
-stream = ExtResource("9_mw0di")
-volume_db = -30.0
+stream = ExtResource("9_npguf")
+volume_db = -25.0
 autoplay = true
 
 [node name="carpet2" parent="Room" instance=ExtResource("14_jt8w2")]
@@ -877,13 +881,14 @@ mesh = SubResource("BoxMesh_wjxtw")
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/computer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991119, 0)
 stream = SubResource("AudioStreamRandomizer_eyaps")
-volume_db = -19.845
+volume_db = -40.0
+max_db = -15.0
 autoplay = true
 
 [node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Room/computer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34019, 0)
 stream = ExtResource("27_n3xrr")
-volume_db = -20.0
+volume_db = -30.0
 autoplay = true
 
 [node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Room/computer"]
@@ -895,7 +900,8 @@ autoplay = true
 [node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="Room/computer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205593, 2.00168, -0.367493)
 stream = SubResource("AudioStreamRandomizer_52oke")
-volume_db = -10.0
+volume_db = -30.0
+max_db = -15.0
 script = ExtResource("37_7y12m")
 
 [node name="AK47" parent="Room" instance=ExtResource("26_1efwb")]
@@ -1095,6 +1101,17 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_m2i78")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
 [node name="Trex" type="Node" parent="."]
 
 [node name="Path3D" type="Path3D" parent="Trex"]
@@ -1123,17 +1140,6 @@ transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207
 script = ExtResource("43_t4xkq")
 pathFollow3D = NodePath("..")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-material = SubResource("ShaderMaterial_m2i78")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
 [node name="Velociraptor" type="Node" parent="."]
 
 [node name="Path3D" type="Path3D" parent="Velociraptor"]
@@ -1160,4 +1166,17 @@ transform = Transform3D(-0.96326, 0, 0.268573, 0, 1, 0, -0.268573, 0, -0.96326, 
 [node name="Velociraptor2" parent="Velociraptor2/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("57_exeyi")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 script = ExtResource("58_ow62p")
+pathFollow3D = NodePath("..")
+
+[node name="Stegosaurus" type="Node" parent="."]
+
+[node name="Path3D" type="Path3D" parent="Stegosaurus"]
+transform = Transform3D(0.107184, 0, 0.994239, 0, 1, 0, -0.994239, 0, 0.107184, 42.5313, 40.603, -23.6679)
+curve = SubResource("Curve3D_3cvcd")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Stegosaurus/Path3D"]
+
+[node name="Stegosaurus" parent="Stegosaurus/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("59_o2yic")]
+transform = Transform3D(1, 0, 0, 0, 0.994613, -0.103661, 0, 0.103661, 0.994613, 0, 0, 0)
+script = ExtResource("60_fnyst")
 pathFollow3D = NodePath("..")

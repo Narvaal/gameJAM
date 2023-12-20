@@ -10,8 +10,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	animation.play("Stegosaurus_Walk")
-	const move_speed := 5
-	
-	pathFollow3D.progress += move_speed * delta
+	#animation.play("Stegosaurus_Walk")
+	#const move_speed := 5
+	#
+	#pathFollow3D.progress += move_speed * delta
 	pass

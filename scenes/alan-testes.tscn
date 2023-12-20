@@ -25,6 +25,7 @@
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_cjmsj"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="24_p12tt"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="25_kydf0"]
+[ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_5b45r"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_j0ogk"]
 [ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_568wg"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="28_thvj4"]
@@ -37,14 +38,13 @@
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="35_otcia"]
 [ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="36_r2e2i"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Stegosaurus.gd" id="37_ms0sa"]
-[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="38_sy66f"]
-[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="39_16jp3"]
 [ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="40_ponww"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="41_2nkmi"]
 [ext_resource type="PackedScene" uid="uid://k1lfp6orjemf" path="res://Blender-Models/dino/Velociraptor.glb" id="42_tk37y"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="43_fldka"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="44_igxri"]
 [ext_resource type="Shader" path="res://pathscripts/crt.gdshader" id="45_t2dav"]
+[ext_resource type="PackedScene" uid="uid://bjooxvu1an74d" path="res://pathscenes/trex.tscn" id="45_w1i7b"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -789,6 +789,10 @@ script = ExtResource("25_kydf0")
 transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736284, 0, 0.53379)
 mesh = SubResource("BoxMesh_wjxtw")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/computer"]
+stream = ExtResource("26_5b45r")
+volume_db = -30.0
+
 [node name="AK47" parent="Room" instance=ExtResource("26_j0ogk")]
 transform = Transform3D(0.0954261, 0.0298974, 0, 0, 0, -0.1, -0.0298974, 0.0954261, 0, -2.25176, -16.3737, -3.54819)
 
@@ -924,10 +928,6 @@ script = ExtResource("43_fldka")
 transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, -56.8719, 40.5547, 2.28858)
 script = ExtResource("41_2nkmi")
 
-[node name="Trex" parent="Dinossauros" instance=ExtResource("38_sy66f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 39.706, 0)
-script = ExtResource("39_16jp3")
-
 [node name="Landscape" type="Node" parent="."]
 
 [node name="landscape-v19" parent="Landscape" instance=ExtResource("44_igxri")]
@@ -947,3 +947,5 @@ grow_vertical = 2
 
 [node name="OmniLight3D" type="OmniLight3D" parent="LandscapeLights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 53, -2)
+
+[node name="Trex" parent="." instance=ExtResource("45_w1i7b")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=85 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
+[ext_resource type="Texture2D" uid="uid://cuvmm0gqe1jj" path="res://images/1-strawberry-png-images.png" id="30_dramn"]
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="31_6qqce"]
 [ext_resource type="PackedScene" uid="uid://buun05y04fdct" path="res://Blender-Models/dino/Stegosaurus.glb" id="32_4htet"]
@@ -413,6 +414,8 @@ albedo_color = Color(1, 0, 1, 1)
 material = SubResource("StandardMaterial3D_tvwva")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_s5f0f"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3ohm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6cett"]
 resource_name = "Material"
@@ -800,6 +803,19 @@ shape = SubResource("BoxShape3D_s5f0f")
 [node name="enemy" parent="Room" instance=ExtResource("27_0trq7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1272, -17.1284, -9.76388)
 
+[node name="TOILET_PEE" parent="Room" instance=ExtResource("37_1rm5h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)
+
+[node name="nota" type="Node3D" parent="Room"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Room/nota"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota/StaticBody3D"]
+shape = SubResource("BoxShape3D_d3ohm")
+
+[node name="Sprite3D" type="Sprite3D" parent="Room/nota/StaticBody3D/CollisionShape3D"]
+texture = ExtResource("30_dramn")
+
 [node name="Light" type="Node" parent="."]
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Light"]
@@ -862,7 +878,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7777, 40.5547, -1.03649)
 
 [node name="Velociraptor" parent="." instance=ExtResource("35_1evo5")]
+<<<<<<< HEAD
 transform = Transform3D(0.748944, 0, -0.662633, 0, 1, 0, 0.662633, 0, 0.748944, -18.8704, 39.8785, 2.76772)
 
 [node name="TOILET_PEE" parent="." instance=ExtResource("37_1rm5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
+>>>>>>> f855614b3bd2ae8197c80dff49c64e22075ba5c6

@@ -1024,7 +1024,7 @@ transform = Transform3D(-0.986996, 0, 0.160743, 0, 1, 0, -0.160743, 0, -0.986996
 curve = SubResource("Curve3D_oetjy")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Velociraptor2/Path3D"]
-transform = Transform3D(-0.96326, 0, 0.268572, 0, 1, 0, -0.268572, 0, -0.96326, 1.30628, 2.28882e-05, 10.0252)
+transform = Transform3D(-0.96326, 0, 0.268573, 0, 1, 0, -0.268573, 0, -0.96326, 1.30628, 2.28882e-05, 10.0252)
 
 [node name="Velociraptor2" parent="Velociraptor2/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("42_tk37y")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

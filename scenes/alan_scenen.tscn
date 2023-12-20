@@ -709,7 +709,7 @@ text = "123"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.1546, -0.151423, 19.2944)
 
 [node name="Camera1" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
-transform = Transform3D(0.0068941, 0, -0.999976, 0, 1, 0, 0.999976, 0, 0.0068941, -27.585, 44.4113, 3.79605)
+transform = Transform3D(0.00668552, 0.244123, -0.969721, -0.00168301, 0.969744, 0.244117, 0.999976, 8.1491e-10, 0.0068941, -33.822, 53.1625, 3.79605)
 script = ExtResource("24_oqnrs")
 value_moved = 0.1
 
@@ -718,7 +718,7 @@ transform = Transform3D(1, 0, 4.65661e-10, 0, 1, 0, -4.65661e-10, 0, 1, -0.00493
 mesh = SubResource("BoxMesh_qmi0u")
 
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
-transform = Transform3D(0.674921, 0, -0.73789, 0, 1, 0, 0.73789, 0, 0.674921, -7.07706, 44.9477, 37.1558)
+transform = Transform3D(0.986401, -0.132923, 0.0966707, 0.104095, 0.96041, 0.25841, -0.127192, -0.244833, 0.961186, 42.9593, 55.397, 69.8373)
 script = ExtResource("24_oqnrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_1/cams/Camera2"]
@@ -726,7 +726,7 @@ transform = Transform3D(1, 0, 9.31323e-10, 0, 1, 0, -9.31323e-10, 0, 1, -0.00736
 mesh = SubResource("BoxMesh_wjxtw")
 
 [node name="Camera3" type="Camera3D" parent="Room/computer/screens/screen_1/cams"]
-transform = Transform3D(0.228708, 0, -0.973495, 0, 1, 0, 0.973495, 0, 0.228708, 3.59259, 44.5029, -10.6502)
+transform = Transform3D(-0.965003, 0, -0.26224, 0, 1, 0, 0.26224, 0, -0.965003, 31.7595, 56.0342, -40.9667)
 script = ExtResource("24_oqnrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_1/cams/Camera3"]
@@ -853,7 +853,7 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.875, 0)
 
 [node name="Stegosaurus" parent="." instance=ExtResource("32_4htet")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9248, 39.875, 64.9208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9248, 51.3498, 52.1402)
 
 [node name="Trex" parent="." instance=ExtResource("27_145to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
@@ -862,7 +862,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.7777, 40.5547, -1.03649)
 
 [node name="Velociraptor" parent="." instance=ExtResource("35_1evo5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
+transform = Transform3D(0.748944, 0, -0.662633, 0, 1, 0, 0.662633, 0, 0.748944, -18.8704, 39.8785, 2.76772)
 
 [node name="TOILET_PEE" parent="." instance=ExtResource("37_1rm5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)

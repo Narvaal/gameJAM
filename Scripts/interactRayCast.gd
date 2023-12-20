@@ -17,10 +17,12 @@ func _physics_process(delta):
 	if note.visible:
 		if Input.is_action_just_pressed("interact"):
 			note.visible = false
-		
+	
+	#Pega o coliding
+	#Esse codigo tá uma P$%ra
 	if is_colliding():
 		var detected = get_collider()
-		if detected is Interactable or detected is Action or detected is Notes or detected is Action2:
+		if detected is Interactable or detected is Action or detected is Notes or detected is Action2 or detected is change_scene:
 			prompt.text = detected.mouseover()
 		
 			if Input.is_action_just_pressed(detected.prompt_action):

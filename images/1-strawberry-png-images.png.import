@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4eyvwvh8nnpf"
-path.s3tc="res://.godot/imported/freezernote_Inserir um pouquinho de texto.png-20acf07f332b7519f3066425249359a0.s3tc.ctex"
+uid="uid://cuvmm0gqe1jj"
+path.s3tc="res://.godot/imported/1-strawberry-png-images.png-eec291bac52adf958c0a3b00f989c9e0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/FREEZERNOTE/freezernote_Inserir um pouquinho de texto.png"
-dest_files=["res://.godot/imported/freezernote_Inserir um pouquinho de texto.png-20acf07f332b7519f3066425249359a0.s3tc.ctex"]
+source_file="res://images/1-strawberry-png-images.png"
+dest_files=["res://.godot/imported/1-strawberry-png-images.png-eec291bac52adf958c0a3b00f989c9e0.s3tc.ctex"]
 
 [params]
 

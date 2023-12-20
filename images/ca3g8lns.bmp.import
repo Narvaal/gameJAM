@@ -2,18 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx2kdvamf0rwd"
-path.s3tc="res://.godot/imported/enemy2_base_baseColor.jpg-b3deac4e0d54ab78410b07d953b70abf.s3tc.ctex"
+uid="uid://dcsjqwevio1yn"
+path.s3tc="res://.godot/imported/ca3g8lns.bmp-bf2c38495b9850deb74df535b48dad51.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
-source_file="res://Blender-Models/BAKED/INEMYY/enemy2_base_baseColor.jpg"
-dest_files=["res://.godot/imported/enemy2_base_baseColor.jpg-b3deac4e0d54ab78410b07d953b70abf.s3tc.ctex"]
+source_file="res://images/ca3g8lns.bmp"
+dest_files=["res://.godot/imported/ca3g8lns.bmp-bf2c38495b9850deb74df535b48dad51.s3tc.ctex"]
 
 [params]
 

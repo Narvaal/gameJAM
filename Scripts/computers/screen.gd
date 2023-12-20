@@ -39,11 +39,11 @@ func pressed():
 		current_cam = 0
 	
 func pressed2():
-	if player_screen.visible:
+	if player_selected_screen.visible:
 		#player.can_move = true
 		#player.can_look_around = true
 		player_screen_colision.collision_layer = player.collision_layer + 1
-		player_screen.visible = false
+		player_selected_screen.visible = false
 	else:
 		#player.can_move = false
 		#player.can_look_around = false
@@ -51,4 +51,4 @@ func pressed2():
 		player_selected_screen._ready()
 		player_screen.texture = selected_screen.get_texture()
 		player_screen_colision.collision_layer = player.collision_layer
-		player_screen.visible = true
+		player_selected_screen.visible = true

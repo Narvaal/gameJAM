@@ -1,0 +1,74 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqeap4efd6g7"]
+
+[ext_resource type="Texture2D" uid="uid://vaw5jyyooy5u" path="res://Blender-Models/BAKED/PAPERPIN/paper_istockphoto-183582878-612x612.jpg" id="1_qikii"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_epyt5"]
+resource_name = "Material"
+cull_mode = 2
+albedo_texture = ExtResource("1_qikii")
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ohvb6"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_eajqw"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}, {
+"aabb": AABB(-1.09549, -0.000119969, -0.0856766, 0.213546, 1.00021e-05, 0.15842),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(251, 255, 13, 0, 0, 0, 0, 0, 251, 255, 9, 0, 254, 255, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_a1erp"]
+resource_name = "paper_Plane"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_epyt5"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}, {
+"aabb": AABB(-1.09549, -0.000119969, -0.0856766, 0.213546, 1.00021e-05, 0.15842),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_ohvb6"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(251, 255, 13, 0, 0, 0, 84, 213, 251, 255, 9, 0, 254, 255, 84, 213, 0, 0, 4, 0, 0, 0, 84, 213, 0, 0, 0, 0, 255, 255, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213, 170, 42, 84, 213)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_eajqw")
+
+[node name="paper2" type="MeshInstance3D"]
+transform = Transform3D(8.85129e-09, 0, 0.105, -0.1485, 5.96046e-08, 9.38773e-09, -1.32769e-08, -1, 0, 0, 0, 0)
+mesh = SubResource("ArrayMesh_a1erp")
+skeleton = NodePath("")

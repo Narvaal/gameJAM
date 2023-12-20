@@ -24,4 +24,4 @@ func pressed():
 	parent.queue_free()
 	note.visible = true
 	note.set_surface_override_material(0,parent.get_active_material(0))
-	sprite.texture = $CollisionShape3D/Sprite3D.texture
+	sprite.texture = $StaticBody3D/CollisionShape3D.texture

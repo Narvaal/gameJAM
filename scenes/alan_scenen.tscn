@@ -744,7 +744,7 @@ text = "123"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -51.3009)
 
 [node name="Camera1" type="Camera3D" parent="Room/computer/screens/screen_2/cams"]
-transform = Transform3D(-0.869452, 0, 0.494018, 0, 1, 0, -0.494018, 0, -0.869452, 15.0278, 50.1463, -39.8243)
+transform = Transform3D(-0.844303, -0.353553, 0.402683, -0.132736, 0.866026, 0.482059, -0.519167, 0.353553, -0.778117, 58.0278, 73.1463, -44.8243)
 script = ExtResource("24_oqnrs")
 value_moved = 0.1
 
@@ -753,7 +753,7 @@ transform = Transform3D(1, 0, 4.65661e-10, 0, 1, 0, -4.65661e-10, 0, 1, -0.00493
 mesh = SubResource("BoxMesh_qmi0u")
 
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_2/cams"]
-transform = Transform3D(-0.859049, 0, -0.511893, 0, 1, 0, 0.511893, 0, -0.859049, -19.8295, 44.243, -23.7215)
+transform = Transform3D(0.511893, 0, -0.859049, 0, 1, 0, 0.859049, 0, 0.511893, -17.8295, 64.243, 57.2785)
 script = ExtResource("24_oqnrs")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_2/cams/Camera2"]

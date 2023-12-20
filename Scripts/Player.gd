@@ -5,7 +5,8 @@ extends CharacterBody3D
 @export var jump_force = 4.5
 @export var can_move = true
 @export var can_look_around = true
-
+var mouse_cap = false
+var sitting = false
 @export_category("Camera Settings")
 @export var mouse_sensitivity := 0.2
 @export var camera_limit_down := -80.0
@@ -37,13 +38,24 @@ func _input(event: InputEvent):
 	
 # quando o jogo começar, trava o mouse na tela
 func _ready():
+	mouse_cap = true
 	set_player_cam()
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func set_player_cam():
 	camera.set_current(true)
-	
+
+
+func toggle_mouse():
+	if mouse_cap == false:
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+		mouse_cap = true
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		mouse_cap = false
+
+
 func _physics_process(delta):
 	# Add the gravity.
 	if can_move:

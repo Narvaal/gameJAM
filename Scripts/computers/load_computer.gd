@@ -1,8 +1,11 @@
 class_name change_scene
 extends StaticBody3D
 
+@onready var player = get_node("/root/AlanScenen/Player")
+@onready var line = get_node("/root/AlanScenen/Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2/LineEdit")
+@onready var control = get_node("/root/AlanScenen/Control")
 @export_category("Promp config")
-@export var prompt_message = "[E] to sit"
+@export var prompt_message = ""
 @export var prompt_action = "interact"
 var parent = MeshInstance3D
 
@@ -12,5 +15,9 @@ func mouseover():
 			return prompt_message
 		
 func pressed():
-	get_tree().change_scene_to_file("res://scenes/control.tscn")
-	#create_trashball()
+	line.clear()
+	#player.toggle_mouse()
+	player.can_move = false
+	player.can_look_around = false
+	control.visible = true
+

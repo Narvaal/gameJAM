@@ -28,7 +28,9 @@ func pressed():
 		player.can_move = false
 		player.global_position = pos
 		player.global_rotation = rot
+		#player.sitting = true
 	else:
 		player.can_move = true
 		player.global_position = pos_player_before
 		player.global_rotation = rot_player_before
+		#player.sitting = false

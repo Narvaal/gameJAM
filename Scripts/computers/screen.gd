@@ -26,7 +26,7 @@ func _ready():
 func mouseover():	
 	for action in InputMap.action_get_events(prompt_action):
 		if action is InputEventKey:
-			return "[" + OS.get_keycode_string(action.physical_keycode) + "] " + prompt_message 
+			return prompt_message 
 	
 	
 func pressed():

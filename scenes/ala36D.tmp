@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=85 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -42,8 +42,6 @@
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="38_evwut"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Velociraptor.gd" id="40_pml2k"]
-[ext_resource type="FontFile" uid="uid://cue24ja4k6cgd" path="res://Fonts/FiraCode-VariableFont_wght.ttf" id="43_2i4d2"]
-[ext_resource type="Script" path="res://Scripts/computers/bash.gd" id="43_u0xb0"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -385,7 +383,7 @@ viewport_path = NodePath("Room/computer/screens/screen_3")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6la2t"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_uyij1"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_xcq6x"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enmpu"]
@@ -510,11 +508,6 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jo77u")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjv44"]
-
-[sub_resource type="Theme" id="Theme_0heex"]
-LineEdit/styles/focus = SubResource("StyleBoxEmpty_qjv44")
-
 [node name="AlanScenen" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -580,7 +573,6 @@ skeleton = NodePath("")
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/bed"]
 transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, -0.00832844, 0.00865787, 0.00829291)
 script = ExtResource("17_om381")
-prompt_message = "[E] Dormir  [F] Esconder"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/bed/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6ajaf")
@@ -592,14 +584,12 @@ transform = Transform3D(-0.82486, -9.80157e-08, 0.133214, -0.0706933, 0.70819, -
 transform = Transform3D(-0.637246, 0, 0.540424, 0, 0.835548, 0, -0.540424, 0, -0.637246, 0.161294, -0.318931, -0.158515)
 
 [node name="chair" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.996174, 0, 0.0873894, 0, 1, 0, -0.0873894, 0, 0.996174, 0.461873, -15.6208, -4.08196)
+transform = Transform3D(0.684758, 0, 0.728771, 0, 1, 0, -0.728771, 0, 0.684758, 0.665746, -15.6208, -3.58442)
 mesh = SubResource("ArrayMesh_tnul0")
 skeleton = NodePath("")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/chair"]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
 script = ExtResource("2_4vl82")
-prompt_message = "[E] Sentar/Levantar"
 pos = Vector3(0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/chair/StaticBody3D"]
@@ -623,7 +613,6 @@ transform = Transform3D(0.817117, 0.0174483, 0.130888, -0.00783374, 0.514574, -0
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_left" node_paths=PackedStringArray("selected_screen")]
 script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
 selected_screen = NodePath("../../screens/screen_1")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_left/screen_body"]
@@ -639,7 +628,6 @@ transform = Transform3D(0.806999, 0, 0, 0, 0.453323, -0.456214, 0, 0.181821, 1.1
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_middle_top" node_paths=PackedStringArray("selected_screen")]
 script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
 selected_screen = NodePath("../../screens/screen_2")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_middle_top/screen_body"]
@@ -655,7 +643,6 @@ transform = Transform3D(0.837576, -0.00716121, -0.0854255, -0.00636011, 0.470056
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_right" node_paths=PackedStringArray("selected_screen")]
 script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Ver no tablet"
 selected_screen = NodePath("../../screens/screen_3")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_right/screen_body"]
@@ -671,7 +658,6 @@ texture = SubResource("ViewportTexture_jg1gv")
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_middle"]
 transform = Transform3D(0.0997424, 0, 0, 0, 0.082933, 0.0207633, 0, -0.0193342, 0.0890632, -0.0027889, 1.11483, 0.178145)
 script = ExtResource("27_3qaib")
-prompt_message = "[E] Abrir console"
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_middle/screen_body"]
 transform = Transform3D(4.56095, 0, 0, 0, 4.81489, 5.96046e-08, 0, -1.19209e-07, 1.64156, -0.124746, 0, 0)
@@ -679,7 +665,7 @@ shape = SubResource("BoxShape3D_6la2t")
 
 [node name="screen_image" type="Sprite3D" parent="Room/computer/computer_screen_middle/screen_body/screen_colision"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 2.23517e-08, 0, 2.98023e-08, 1, 0.0102198, 0.0195618, 0.0124588)
-texture = SubResource("ViewportTexture_uyij1")
+texture = SubResource("ViewportTexture_xcq6x")
 
 [node name="screens" type="Control" parent="Room/computer"]
 layout_mode = 3
@@ -797,7 +783,6 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.10977, -16.3202, -1.
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota"]
 script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -808,11 +793,10 @@ transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 texture = ExtResource("30_w8pgi")
 
 [node name="nota2" type="Node3D" parent="Room"]
-transform = Transform3D(0.000226218, 0, -0.0599996, 0, 0.018, 0, 0.0599996, 0, 0.000226218, -0.263973, -15.5723, -4.21854)
+transform = Transform3D(-0.0704436, 0, -0.0709768, 0, 0.1, 0, 0.0709768, 0, -0.0704436, 0.484885, -15.7041, -3.78521)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota2"]
 script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota2/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -827,7 +811,6 @@ transform = Transform3D(0.0986603, 0, 0.0163137, 0, 0.1, 0, -0.0163137, 0, 0.098
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota3"]
 script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota3/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -842,7 +825,6 @@ transform = Transform3D(0.0986603, 0, 0.0163137, 0, 0.1, 0, -0.0163137, 0, 0.098
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room/nota4"]
 script = ExtResource("24_68qi4")
-prompt_message = "[E] Ler nota"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/nota4/StaticBody3D"]
 transform = Transform3D(3.82137e-15, -2, -4.37114e-08, -8.74228e-08, -8.74228e-08, 1, -2, 0, -4.37114e-08, 0, 0, 0)
@@ -873,7 +855,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05654, -14.0196, -2.345)
 light_energy = 0.2
 
 [node name="Player" parent="." instance=ExtResource("13_10ck6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962778, -16.4732, -2.22851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8065, -16.3271, -0.911579)
 speed = 2.5
 jump_force = 0.0
 
@@ -881,7 +863,6 @@ jump_force = 0.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47069, -0.659529)
 collision_layer = 4
 script = ExtResource("23_5fggu")
-prompt_message = "[E] Alternar câmera [F] Largar Tablet"
 selected_screen = NodePath("../../Room/computer/screens/screen_2")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Player/screen_player"]
@@ -920,65 +901,3 @@ script = ExtResource("40_pml2k")
 
 [node name="landscape-v19" parent="Landscape" instance=ExtResource("31_6qqce")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.875, 0)
-
-[node name="Control" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("43_u0xb0")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="Control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SubViewport" type="SubViewport" parent="Control/SubViewportContainer"]
-handle_input_locally = false
-size = Vector2i(1920, 1080)
-render_target_clear_mode = 2
-render_target_update_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="Control/SubViewportContainer/SubViewport"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="PanelContainer" type="PanelContainer" parent="Control/SubViewportContainer/SubViewport/MarginContainer"]
-layout_mode = 2
-
-[node name="VSplitContainer" type="VSplitContainer" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer"]
-layout_mode = 2
-dragger_visibility = 2
-
-[node name="ColorRect" type="ColorRect" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer"]
-custom_minimum_size = Vector2(0, 1040)
-layout_mode = 2
-color = Color(0.0470588, 0.0470588, 0.0470588, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect"]
-custom_minimum_size = Vector2(1920, 1040)
-layout_mode = 0
-theme_override_fonts/normal_font = ExtResource("43_2i4d2")
-bbcode_enabled = true
-scroll_following = true
-
-[node name="ColorRect2" type="ColorRect" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer"]
-layout_mode = 2
-color = Color(0.180392, 0.180392, 0.180392, 1)
-
-[node name="LineEdit" type="LineEdit" parent="Control/SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2"]
-custom_minimum_size = Vector2(1920, 40)
-layout_mode = 0
-theme = SubResource("Theme_0heex")
-theme_override_fonts/font = ExtResource("43_2i4d2")
-max_length = 20
-context_menu_enabled = false
-virtual_keyboard_enabled = false
-virtual_keyboard_type = 6
-shortcut_keys_enabled = false
-middle_mouse_paste_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-caret_blink = true

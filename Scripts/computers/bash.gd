@@ -1,7 +1,9 @@
 extends Control
 
-@onready var prompt = get_node("MarginContainer/PanelContainer/VSplitContainer/ColorRect/RichTextLabel")
-@onready var input = get_node("MarginContainer/PanelContainer/VSplitContainer/ColorRect2/LineEdit")
+@onready var player = get_node("/root/AlanScenen/Player")
+@onready var prompt = get_node("SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect/RichTextLabel")
+@onready var sub_container = get_node("SubViewportContainer")
+@onready var input = get_node("SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2/LineEdit")
 var input_list: Array[String]
 var auto_complete: Array[String] = ["arquivos","menu","clear","valores.txt"]
 var cont = 0
@@ -21,17 +23,19 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
 	if Input.is_action_just_pressed("ui_cancel"):
-		if get_tree().get_current_scene().get_name() == self.name:
-			get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
-	
+		self.visible = false
+		player.can_look_around = true
+		player.can_move = true
+		#if get_tree().get_current_scene().get_name() == self.name:
+			#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
+		
 	if Input.is_action_just_pressed("ui_focus_next"):
 		if input.text != "":
 			find_index = auto_complete.find(input.text.to_lower(),0)
 			if find_index != -1:
 				input.text = auto_complete[find_index]
-		
+			
 	#if Input.is_action_just_pressed("ui_up"):
 		#if cont < input_list.size():
 			#input.text = input_list[cont]
@@ -42,8 +46,6 @@ func _process(delta):
 			#input.text = input_list[cont]
 			#cont -= 1
 			
-			
-		
 	if Input.is_action_just_pressed("ui_text_submit"):
 		if input.text != "":
 			prompt.text += "[color=green]676584@2131:[color=white]"+input.text + "\n"
@@ -70,10 +72,12 @@ func _process(delta):
 					prompt.text += back()
 					prompt.text += get_relatorios()
 				"sair":
-					get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
+					player.can_look_around = true
+					#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
+					self.visible = false
+					
+					player.can_move = true
 				_:
-					
-					
 					if respondendo and input.text != "back":
 						prompt.text += "Respostas Salvas"
 						get_answer(input.text)
@@ -81,7 +85,7 @@ func _process(delta):
 						prompt.text += "[color=red]Não foi possivel encontrar o comando {" + input.text +"}\n"
 						
 			input_list.append(input.text)
-			input.clear()			
+			input.clear()	
 
 func get_menu():
 	return get_logo() + "[color=white]-->Menu

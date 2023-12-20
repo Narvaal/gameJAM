@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=93 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -27,6 +27,7 @@
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
+[ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_bnbjg"]
 [ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
@@ -512,6 +513,13 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_jo77u")
 
+[sub_resource type="Curve3D" id="Curve3D_kmqd4"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -11.6957, 2.67029e-05, 12.2751, 0, 0, 0, 0, 0, 0, -16.0118, 2.67029e-05, -4.38343, 0, 0, 0, 0, 0, 0, -12.5287, 2.67029e-05, -13.8485, 0, 0, 0, 0, 0, 0, 7.15866, 2.67029e-05, -16.3473, 0, 0, 0, 0, 0, 0, 13.9735, 2.67029e-05, -10.6682, 0, 0, 0, 0, 0, 0, 4.7356, 2.67029e-05, 10.6092, 0, 0, 0, 0, 0, 0, -11.6957, 2.67029e-05, 12.2751),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjv44"]
 
 [sub_resource type="Theme" id="Theme_0heex"]
@@ -778,6 +786,10 @@ script = ExtResource("24_oqnrs")
 transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736284, 0, 0.53379)
 mesh = SubResource("BoxMesh_wjxtw")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/computer"]
+stream = ExtResource("26_bnbjg")
+volume_db = -19.845
+
 [node name="AK47" parent="Room" instance=ExtResource("26_1efwb")]
 transform = Transform3D(0.0954261, 0.0298974, 0, 0, 0, -0.1, -0.0298974, 0.0954261, 0, -2.25176, -16.3737, -3.54819)
 
@@ -906,10 +918,6 @@ skeleton = NodePath("")
 
 [node name="Dinossauros" type="Node" parent="."]
 
-[node name="Stegosaurus" parent="Dinossauros" instance=ExtResource("32_4htet")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 44.6928, -9.75118)
-script = ExtResource("34_54rwb")
-
 [node name="Trex" parent="Dinossauros" instance=ExtResource("27_145to")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
 script = ExtResource("35_umx8y")
@@ -921,6 +929,18 @@ script = ExtResource("38_evwut")
 [node name="Velociraptor" parent="Dinossauros" instance=ExtResource("35_1evo5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
 script = ExtResource("40_pml2k")
+
+[node name="Path3D" type="Path3D" parent="Dinossauros"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3912, 39.879, 0)
+curve = SubResource("Curve3D_kmqd4")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Dinossauros/Path3D"]
+transform = Transform3D(0.968035, 0, 0.250811, 0, 1, 0, -0.250811, 0, 0.968035, -11.6957, 2.67029e-05, 12.2751)
+
+[node name="Stegosaurus" parent="Dinossauros/Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("32_4htet")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312392, 0.76804, 0.933543)
+script = ExtResource("34_54rwb")
+pathFollow3D = NodePath("..")
 
 [node name="Landscape" type="Node" parent="."]
 

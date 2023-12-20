@@ -17,6 +17,7 @@ func mouseover():
 func pressed():
 	line.clear()
 	#player.toggle_mouse()
+	self.collision_layer = player.collision_layer + 1
 	player.can_move = false
 	player.can_look_around = false
 	control.visible = true

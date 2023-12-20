@@ -13,6 +13,7 @@ var cams: Array[Node]
 var label_current_cam: Label
 var current_cam: int = 0
 
+@onready var audio_player = get_node("/root/AlanScenen/Room/computer/AudioStreamPlayer3D")
 @onready var player = get_node("/root/AlanScenen/Player")
 @onready var player_selected_screen = get_node("/root/AlanScenen/Player/screen_player")
 @onready var player_screen = get_node("/root/AlanScenen/Player/screen_player/screen_colision/screen_image")
@@ -30,10 +31,14 @@ func mouseover():
 	
 	
 func pressed():
+	
 	label_current_cam.text = str(current_cam + 1) + "/" + str(cams.size())
+	
+	print(current_cam)
 	
 	cams[current_cam].make_current()
 	current_cam += 1
+	audio_player.play()
 	
 	if current_cam == cams.size():
 		current_cam = 0

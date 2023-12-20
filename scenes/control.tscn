@@ -66,3 +66,5 @@ selecting_enabled = false
 deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 caret_blink = true
+
+[connection signal="text_changed" from="SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2/LineEdit" to="." method="_on_line_edit_text_changed"]

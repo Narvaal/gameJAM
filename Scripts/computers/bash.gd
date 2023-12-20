@@ -4,6 +4,8 @@ extends Control
 @onready var prompt = get_node("SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect/RichTextLabel")
 @onready var sub_container = get_node("SubViewportContainer")
 @onready var input = get_node("SubViewportContainer/SubViewport/MarginContainer/PanelContainer/VSplitContainer/ColorRect2/LineEdit")
+@onready var computer_colision = get_node("/root/AlanScenen/Room/computer/computer_screen_middle/screen_body")
+
 var input_list: Array[String]
 var auto_complete: Array[String] = ["arquivos","menu","clear","valores.txt"]
 var cont = 0
@@ -23,10 +25,13 @@ func _ready():
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	
 	if Input.is_action_just_pressed("ui_cancel"):
 		self.visible = false
 		player.can_look_around = true
 		player.can_move = true
+		computer_colision.collision_layer = player.collision_layer
 		#if get_tree().get_current_scene().get_name() == self.name:
 			#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
 		
@@ -75,6 +80,7 @@ func _process(delta):
 					player.can_look_around = true
 					#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
 					self.visible = false
+					computer_colision.collision_layer = player.collision_layer
 					
 					player.can_move = true
 				_:
@@ -221,3 +227,7 @@ func get_score():
 	
 func back():
 	return "Saiu do modo preenchimento + \n"
+
+
+func _on_line_edit_text_changed(new_text):
+	print("asd")

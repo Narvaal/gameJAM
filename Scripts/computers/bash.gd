@@ -74,7 +74,6 @@ func _process(delta):
 					
 				"sair":
 					player.can_look_around = true
-					#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
 					self.visible = false
 					computer_colision.collision_layer = player.collision_layer
 					
@@ -231,7 +230,8 @@ func _on_line_edit_text_changed(new_text):
 
 
 func help():
-	return "O
+	return "
+	Comandos: Clear 
 	
 	
 	"

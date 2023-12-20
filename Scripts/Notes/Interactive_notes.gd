@@ -4,7 +4,7 @@ extends StaticBody3D
 @onready var player = get_node("/root/AlanScenen/Player")
 @onready var note = get_node("/root/AlanScenen/Player/Head/Vertical/InteractRayCast/note")
 @onready var sprite = get_node("/root/AlanScenen/Player/Head/Vertical/InteractRayCast/note/StaticBody3D/CollisionShape3D/Sprite3D")
-
+@onready var note_sound = get_node("/root/AlanScenen/Player/screen_player/AudioStreamPlayer3D")
 @onready var sprite_globe = $CollisionShape3D/Sprite3D
 
 @export_category("Promp config")
@@ -26,4 +26,5 @@ func pressed():
 	parent.queue_free()
 	note.visible = true
 	sprite.texture = sprite_globe.texture
+	note_sound.play()
 

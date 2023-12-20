@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=106 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -6,12 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://sdq4xwh0objm" path="res://Blender-Models/BAKED/COKEBOTTLE/coke.glb" id="4_rmfo0"]
 [ext_resource type="PackedScene" uid="uid://bfnc51hcq821p" path="res://Blender-Models/BAKED/PAPERS/papers_notes.glb" id="7_s508g"]
 [ext_resource type="PackedScene" uid="uid://due1tm0waorml" path="res://Blender-Models/BAKED/TOILET_PAPER/TOILET_PAPER.glb" id="9_3h0a8"]
+[ext_resource type="AudioStream" uid="uid://uorvxj3twm2r" path="res://Songs/426422__devern__closing-noisy-metal-door.wav" id="9_mw0di"]
 [ext_resource type="PackedScene" uid="uid://jy37adorxwf0" path="res://Blender-Models/BAKED/TOWEL/TOWEL.glb" id="10_2iura"]
 [ext_resource type="PackedScene" uid="uid://ele24jyva0ec" path="res://Blender-Models/BAKED/TRASH/trash.glb" id="11_lk43m"]
 [ext_resource type="PackedScene" uid="uid://d2pnhih0pfjgu" path="res://Blender-Models/BAKED/DOOR/door.glb" id="12_ovjqd"]
 [ext_resource type="PackedScene" uid="uid://duu4ufogws8ip" path="res://scenes/Player/player.tscn" id="13_10ck6"]
 [ext_resource type="PackedScene" uid="uid://5lpm4w6lc2jr" path="res://Blender-Models/BAKED/CARPET/carpet.glb" id="14_jt8w2"]
 [ext_resource type="PackedScene" uid="uid://bch6yg6dbjxhc" path="res://Blender-Models/BAKED/TETO/teto.glb" id="15_ilfcn"]
+[ext_resource type="AudioStream" uid="uid://b4hfc84ofkrxh" path="res://Songs/130474__ecfike__box-freezer-loop.wav" id="15_xc5em"]
 [ext_resource type="PackedScene" uid="uid://b4dvo4foxc83o" path="res://Blender-Models/BAKED/WALLTABLE/walltable.glb" id="16_mleik"]
 [ext_resource type="PackedScene" uid="uid://cq70dunc4uq6" path="res://Blender-Models/BAKED/VIDEOTAPE/videotape.glb" id="17_cc7wg"]
 [ext_resource type="Script" path="res://Scripts/bed/bed_script.gd" id="17_om381"]
@@ -20,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
@@ -28,15 +30,25 @@
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
 [ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_bnbjg"]
-[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
+[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
+[ext_resource type="AudioStream" uid="uid://dth8i17yrvulf" path="res://Songs/39307__the_bizniss__computer-noise-2.wav" id="27_n3xrr"]
+[ext_resource type="AudioStream" uid="uid://5cxv3e3ajqem" path="res://Songs/wind-in-trees-117477.mp3" id="30_ubdkn"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
 [ext_resource type="PackedScene" uid="uid://k50gcwiv4vsu" path="res://modelos/landscape/landscape-v19.glb" id="31_6qqce"]
+[ext_resource type="AudioStream" uid="uid://dcqh7ogimf37b" path="res://Songs/dino/dino/211948__bestroflman__giganotasaurus-growl.mp3" id="31_237tq"]
 [ext_resource type="Texture2D" uid="uid://cjtu2bqvq47m5" path="res://images/3.png" id="31_rncwb"]
+[ext_resource type="AudioStream" uid="uid://c8b1cplo82wtu" path="res://Songs/dino/dino/316414__littlerobotsoundfactory__dinosaur_16.wav" id="32_30yh5"]
 [ext_resource type="Texture2D" uid="uid://bjj53j0a4u6x1" path="res://images/4.png" id="32_htcr1"]
 [ext_resource type="Texture2D" uid="uid://j57yapjwrpxr" path="res://images/5.png" id="33_70f8m"]
+[ext_resource type="AudioStream" uid="uid://c5aw7rfksg12d" path="res://Songs/dino/dino/529462__caveboytup__t-rex-calls.mp3" id="33_smkpo"]
+[ext_resource type="AudioStream" uid="uid://blaj0uavgwxd6" path="res://Songs/dino/dino/675512__craigsmith__s27-16-large-alligator-growls-dinosaur-or-monster.wav" id="34_1k4xi"]
+[ext_resource type="AudioStream" uid="uid://bribiyihmkgmh" path="res://Songs/dino/dino/705489__scpsea__stegosaurus-roaring.mp3" id="35_ny56j"]
+[ext_resource type="AudioStream" uid="uid://cltmp3qi5jp8v" path="res://Songs/dino/dino/706571__shangasdfguy123__carnotaurus-screeches.wav" id="36_6wgbl"]
 [ext_resource type="PackedScene" uid="uid://dpkliitcd62uf" path="res://pathscenes/toilet_pee.tscn" id="37_1rm5h"]
+[ext_resource type="Script" path="res://scenes/AudioStreamPlayer3D4.gd" id="37_7y12m"]
+[ext_resource type="AudioStream" uid="uid://canxrj5ce51dd" path="res://Songs/614081__mateusboga__opening-a-book.wav" id="39_q7qmu"]
 [ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="40_mmk7w"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="41_j4bff"]
 [ext_resource type="PackedScene" uid="uid://xj54h277yaje" path="res://Blender-Models/dino/Triceratops.glb" id="42_ydmrs"]
@@ -406,6 +418,27 @@ albedo_color = Color(1, 0, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_vic8a"]
 material = SubResource("StandardMaterial3D_tvwva")
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_eyaps"]
+streams_count = 1
+stream_0/stream = ExtResource("26_bnbjg")
+stream_0/weight = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_52oke"]
+random_pitch = 2.0
+streams_count = 6
+stream_0/stream = ExtResource("31_237tq")
+stream_0/weight = 1.0
+stream_1/stream = ExtResource("32_30yh5")
+stream_1/weight = 1.0
+stream_2/stream = ExtResource("33_smkpo")
+stream_2/weight = 1.0
+stream_3/stream = ExtResource("34_1k4xi")
+stream_3/weight = 1.0
+stream_4/stream = ExtResource("35_ny56j")
+stream_4/weight = 1.0
+stream_5/stream = ExtResource("36_6wgbl")
+stream_5/weight = 1.0
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_s5f0f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d3ohm"]
@@ -595,6 +628,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.441, -16.3556, 1.1)
 [node name="door" parent="Room" instance=ExtResource("12_ovjqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.323, -16.3556, 1.08)
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.25202, 0.959644, -3.17037)
+stream = ExtResource("9_mw0di")
+volume_db = -10.0
+autoplay = true
+
 [node name="carpet2" parent="Room" instance=ExtResource("14_jt8w2")]
 transform = Transform3D(0.997564, 0, 0.0697565, 0, 1, 0, -0.0697565, 0, 0.997564, -0.17, -16.3556, 0.885)
 
@@ -609,6 +648,11 @@ transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, 1.6449
 
 [node name="minibar" parent="Room" instance=ExtResource("17_wr7rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459193, -16.3556, 1.16956)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/minibar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69661, 0, -1.68865)
+stream = ExtResource("15_xc5em")
+autoplay = true
 
 [node name="bed" type="MeshInstance3D" parent="Room"]
 transform = Transform3D(-1.94987e-07, 0, 1.19682, 0, 1.19682, 0, -1.19682, 0, -1.94987e-07, -3.12128, -15.8756, -3.49755)
@@ -701,7 +745,7 @@ transform = Transform3D(1, -9.31323e-10, -9.31323e-10, 7.45058e-09, 1, 1.86265e-
 shape = SubResource("BoxShape3D_c6gmr")
 
 [node name="screen_image" type="Sprite3D" parent="Room/computer/computer_screen_right/screen_body/screen_colision"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(0.194003, 0.000748943, 0.0486026, 0.000147804, 0.199966, -0.00367142, -0.0486085, 0.00359726, 0.19397, 6.65188e-05, 0.000110626, 0.00647736)
 texture = SubResource("ViewportTexture_jg1gv")
 
 [node name="computer_screen_middle" type="Node3D" parent="Room/computer"]
@@ -815,8 +859,28 @@ transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736
 mesh = SubResource("BoxMesh_wjxtw")
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/computer"]
-stream = ExtResource("26_bnbjg")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991119, 0)
+stream = SubResource("AudioStreamRandomizer_eyaps")
 volume_db = -19.845
+autoplay = true
+
+[node name="AudioStreamPlayer3D2" type="AudioStreamPlayer3D" parent="Room/computer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.34019, 0)
+stream = ExtResource("27_n3xrr")
+volume_db = -20.0
+autoplay = true
+
+[node name="AudioStreamPlayer3D3" type="AudioStreamPlayer3D" parent="Room/computer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.09307, 0)
+stream = ExtResource("30_ubdkn")
+volume_db = -25.0
+autoplay = true
+
+[node name="AudioStreamPlayer3D4" type="AudioStreamPlayer3D" parent="Room/computer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.205593, 2.00168, -0.367493)
+stream = SubResource("AudioStreamRandomizer_52oke")
+volume_db = -10.0
+script = ExtResource("37_7y12m")
 
 [node name="AK47" parent="Room" instance=ExtResource("26_1efwb")]
 transform = Transform3D(0.0954261, 0.0298974, 0, 0, 0, -0.1, -0.0298974, 0.0954261, 0, -2.25176, -16.3737, -3.54819)
@@ -915,7 +979,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.05654, -14.0196, -2.345)
 light_energy = 0.2
 
 [node name="Player" parent="." instance=ExtResource("13_10ck6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.962778, -16.4732, -2.22851)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.03789, -16.4732, -2.1195)
 speed = 2.5
 jump_force = 0.0
 
@@ -939,6 +1003,10 @@ texture = SubResource("ViewportTexture_wth1o")
 transform = Transform3D(2.95874, 0, 0, 0, 3.32757, 0, 0, 0, 0.708853, -0.0188408, -0.351753, -0.613533)
 mesh = SubResource("ArrayMesh_bjtgq")
 skeleton = NodePath("")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Player/screen_player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.76837e-07, -0.217488, -0.268265)
+stream = ExtResource("39_q7qmu")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 
@@ -1048,3 +1116,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+metadata/_edit_use_anchors_ = true

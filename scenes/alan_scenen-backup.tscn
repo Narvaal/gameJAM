@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dlyt01hbh7nu2"]
+[gd_scene load_steps=19 format=3 uid="uid://dkw2krtwfl12t"]
 
 [ext_resource type="PackedScene" uid="uid://bldct4kgwmsuw" path="res://Blender-Models/BAKED/BED/bed.glb" id="1_k1n0k"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_p6ape"]

@@ -32,16 +32,17 @@ func mouseover():
 	
 func pressed():
 	
+	if current_cam < cams.size() - 1:
+		current_cam += 1
+	else:
+		current_cam = 0
+		
 	label_current_cam.text = str(current_cam + 1) + "/" + str(cams.size())
 	
-	print(current_cam)
-	
 	cams[current_cam].make_current()
-	current_cam += 1
 	audio_player.play()
 	
-	if current_cam == cams.size():
-		current_cam = 0
+	
 	
 func pressed2():
 	if player_screen.visible:

@@ -76,6 +76,10 @@ func _process(delta):
 				"back":
 					prompt.text += back()
 					prompt.text += get_relatorios()
+				
+				"glossario":
+					prompt.text += get_glossario()
+					
 				"sair":
 					player.can_look_around = true
 					#get_tree().change_scene_to_file("res://scenes/alan_scenen.tscn")
@@ -231,3 +235,46 @@ func back():
 
 func _on_line_edit_text_changed(new_text):
 	print("asd")
+
+
+
+func help():
+	return "O
+	
+	
+	"
+
+func get_glossario():
+	return "[color=white]
+--------------------------
+- DINOSSAUROS -- CODIGO --
+- Stegosaurus -- 8953   -- 
+- Trex 	      -- 2529   --
+- Triceratops -- 9845   --
+- Velociraptor-- 1567   --
+--------------------------
+- Camera1 -- L12	--
+- Camera2 -- L23	--
+- Camera3 -- L34	--
+--------------------------
+- Camera1 -- M12	--
+- Camera2 -- M23	--
+--------------------------
+- Camera1 -- R12	--
+- Camera2 -- R23	--
+--------------------------
+- Sim --- 0001
+- Não --- 0002
+- Confirmado --- 0003
+--------------------------
+- Anomalia --- 65
+--------------------------
+- Dia1 -- D0
+- Dia2 -- D1
+- Dia3 -- D2
+- Dia4 -- D3
+- Dia5 -- D4
+- Dia6 -- D5
+- Dia7 -- D6
+--------------------------
+"

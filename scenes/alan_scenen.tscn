@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=92 format=3 uid="uid://b5ixcdq2m2a2d"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -43,6 +43,7 @@
 [ext_resource type="FontFile" uid="uid://cue24ja4k6cgd" path="res://Fonts/FiraCode-VariableFont_wght.ttf" id="43_2i4d2"]
 [ext_resource type="Script" path="res://Scripts/Dino_script/Triceratops.gd" id="43_t4xkq"]
 [ext_resource type="Script" path="res://Scripts/computers/bash.gd" id="43_u0xb0"]
+[ext_resource type="Shader" path="res://pathscripts/crt.gdshader" id="44_qnn6i"]
 
 [sub_resource type="Environment" id="Environment_sktv7"]
 reflected_light_source = 1
@@ -527,6 +528,30 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 14
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m2i78"]
+shader = ExtResource("44_qnn6i")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.1
+shader_parameter/resolution = Vector2(1920, 1080)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 0.0
+shader_parameter/roll_size = 1.0
+shader_parameter/roll_variation = 5.0
+shader_parameter/distort_intensity = 0.01
+shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_speed = 0.0
+shader_parameter/static_noise_intensity = 0.001
+shader_parameter/aberration = 0.01
+shader_parameter/brightness = 1.5
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.145
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.25
+shader_parameter/vignette_opacity = 0.25
 
 [node name="AlanScenen" type="Node3D"]
 
@@ -1013,3 +1038,13 @@ transform = Transform3D(0.961347, -0.000210726, -0.275342, 2.18279e-11, 1, -0.00
 transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, 0, 0, 0)
 script = ExtResource("43_t4xkq")
 pathFollow3D = NodePath("..")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_m2i78")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

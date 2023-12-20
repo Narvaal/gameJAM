@@ -25,9 +25,8 @@ func _physics_process(delta):
 		var detected = get_collider()
 		if detected is Interactable or detected is Action or detected is Notes or detected is Action2 or detected is change_scene:
 			prompt.text = detected.mouseover()
-			
-			
-				
+
+			#Ale de amanhã resolve
 			if detected is change_scene and control.visible == false:
 				if Input.is_action_just_pressed(detected.prompt_action):
 					detected.pressed()

@@ -916,10 +916,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 44.6928, -9.75118)
 script = ExtResource("37_ms0sa")
 
-[node name="Trex" parent="Dinossauros" instance=ExtResource("38_sy66f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
-script = ExtResource("39_16jp3")
-
 [node name="Velociraptor" parent="Dinossauros" instance=ExtResource("42_tk37y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8704, 39.8785, 2.76772)
 script = ExtResource("43_fldka")
@@ -927,6 +923,10 @@ script = ExtResource("43_fldka")
 [node name="Triceratops" parent="Dinossauros" instance=ExtResource("40_ponww")]
 transform = Transform3D(-0.986207, 0, 0.165517, 0, 1, 0, -0.165517, 0, -0.986207, -56.8719, 40.5547, 2.28858)
 script = ExtResource("41_2nkmi")
+
+[node name="Trex" parent="Dinossauros" instance=ExtResource("38_sy66f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 39.706, 0)
+script = ExtResource("39_16jp3")
 
 [node name="Landscape" type="Node" parent="."]
 
@@ -942,3 +942,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="LandscapeLights" type="Node" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="LandscapeLights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43, 53, -2)

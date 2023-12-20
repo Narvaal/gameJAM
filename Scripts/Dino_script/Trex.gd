@@ -11,8 +11,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	animation.play("TRex_Walk")
-	#const move_speed := 10
-	
+	#const move_speed := 5
+	#
 	#pathFollow3D.progress += move_speed * delta
 	pass
 

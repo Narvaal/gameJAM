@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://by00ch2nxl31i"]
+
+[ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="1_hf4nm"]
+[ext_resource type="Script" path="res://Scripts/Dino_script/Trex.gd" id="2_ix5tw"]
+
+[sub_resource type="Curve3D" id="Curve3D_1chle"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 1.13491, 3.8147e-05, 6.15129, 0, 0, 0, 0, 0, 0, -3.67222, 3.8147e-05, 29.145, 0, 0, 0, 0, 0, 0, 2.61578, 3.8147e-05, 31.561, 0, 0, 0, 0, 0, 0, 15.7696, 3.8147e-05, 32.1874, 0, 0, 0, 0, 0, 0, 23.3905, 3.8147e-05, 32.7093, 0, 0, 0, 0, 0, 0, 40.9044, 4.65182, 31.4262, 0, 0, 0, 0, 0, 0, 44.2319, 8.59779, 18.8828, 0, 0, 0, 0, 0, 0, 56.0527, 7.63464, 5.12751, 0, 0, 0, 0, 0, 0, 33.8844, -0.671837, -6.39316, 0, 0, 0, 0, 0, 0, 23.2991, 3.8147e-05, -6.45279, 0, 0, 0, 0, 0, 0, 9.15738, 3.8147e-05, -0.113182, 0, 0, 0, 0, 0, 0, 1.13491, 3.8147e-05, 6.15129),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0.785398, 0, 0, 0)
+}
+point_count = 12
+
+[node name="Trex" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.53373, 39.889, -66.815)
+curve = SubResource("Curve3D_1chle")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.978838, 0, 0.204639, 0, 1, 0, -0.204639, 0, -0.978838, 1.13491, 3.8147e-05, 6.15129)
+
+[node name="Trex" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("1_hf4nm")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+script = ExtResource("2_ix5tw")
+pathFollow3D = NodePath("..")

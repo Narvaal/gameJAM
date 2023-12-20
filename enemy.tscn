@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dti2rjpinb744"]
+
+[ext_resource type="PackedScene" uid="uid://lhvx7gcnhov3" path="res://pathscenes/enemy_v_1.tscn" id="1_y8m1d"]
+
+[sub_resource type="Curve3D" id="Curve3D_1chle"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -3.0049, -3.43323e-05, 17.2546, 0, 0, 0, 0, 0, 0, 1.37207, -3.43323e-05, 33.8246, 0, 0, 0, 0, 0, 0, -8.94504, -3.43323e-05, 56.3346, 0, 0, 0, 0, 0, 0, -1.44168, -3.43323e-05, 70.7161, 0, 0, 0, 0, 0, 0, -6.75656, -3.43323e-05, 86.3481, 0, 0, 0, 0, 0, 0, -7.27123, -3.43323e-05, 108.555, 0, 0, 0, 0, 0, 0, -8.83443, -3.43323e-05, 123.874, 0, 0, 0, 0, 0, 0, -1.33106, -3.43323e-05, 132.003),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[node name="Enemy" type="Node3D"]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.2175, 45.8837, -61.7782)
+curve = SubResource("Curve3D_1chle")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.966838, 0, -0.255391, 0, 1, 0, 0.255391, 0, -0.966838, -3.0049, -3.43323e-05, 17.2546)
+
+[node name="enemy-v1" parent="Path3D/PathFollow3D" node_paths=PackedStringArray("pathFollow3D") instance=ExtResource("1_y8m1d")]
+transform = Transform3D(-0.428836, 0, 0.903383, 0, 1, 0, -0.903383, 0, -0.428836, 26.8686, -5.99466, -29.5238)
+pathFollow3D = NodePath("..")

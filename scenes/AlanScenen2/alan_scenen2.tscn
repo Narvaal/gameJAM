@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=3 uid="uid://b5ixcdq2m2a2d"]
+[gd_scene load_steps=82 format=3 uid="uid://cn3al0exc1pom"]
 
 [ext_resource type="Script" path="res://Scripts/Interactive_objs/Interactive.gd" id="2_4vl82"]
 [ext_resource type="PackedScene" uid="uid://wteql2kb3vi3" path="res://Blender-Models/BAKED/CORRIDOR/corridor.glb" id="2_fw2iu"]
@@ -27,7 +27,6 @@
 [ext_resource type="Script" path="res://Scripts/Notes/Interactive_notes.gd" id="24_68qi4"]
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
-[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="PackedScene" uid="uid://dan0aakxcu2sp" path="res://Blender-Models/dino/Trex.glb" id="27_145to"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
@@ -769,9 +768,6 @@ transform = Transform3D(0.986432, 0.16417, 0, -0.164169, 0.986431, 0, 0, 0, 1, 0
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Room/AK47/StaticBody3D"]
 transform = Transform3D(-0.359461, -8.09133, -0.0162562, 2.36287, -1.21753, -0.066146, 0.149828, -0.211191, 1.00416, 0, 0, 0)
 shape = SubResource("BoxShape3D_s5f0f")
-
-[node name="enemy" parent="Room" instance=ExtResource("27_0trq7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1272, -17.1284, -9.76388)
 
 [node name="TOILET_PEE" parent="Room" instance=ExtResource("37_1rm5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)

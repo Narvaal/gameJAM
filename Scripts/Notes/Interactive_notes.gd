@@ -5,6 +5,8 @@ extends StaticBody3D
 @onready var note = get_node("/root/AlanScenen/Player/Head/Vertical/InteractRayCast/note")
 @onready var sprite = get_node("/root/AlanScenen/Player/Head/Vertical/InteractRayCast/note/StaticBody3D/CollisionShape3D/Sprite3D")
 
+@onready var sprite_globe = $CollisionShape3D/Sprite3D
+
 @export_category("Promp config")
 @export var prompt_message = "[E] to sit"
 @export var prompt_action = "interact"
@@ -23,5 +25,5 @@ func mouseover():
 func pressed():
 	parent.queue_free()
 	note.visible = true
-	note.set_surface_override_material(0,parent.get_active_material(0))
-	sprite.texture = $StaticBody3D/CollisionShape3D.texture
+	sprite.texture = sprite_globe.texture
+

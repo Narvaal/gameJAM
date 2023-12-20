@@ -1,12 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://duu4ufogws8ip"]
+[gd_scene load_steps=6 format=3 uid="uid://duu4ufogws8ip"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_j1lb6"]
 [ext_resource type="Script" path="res://Scripts/interactRayCast.gd" id="2_jwkjf"]
-[ext_resource type="Texture2D" uid="uid://dcsjqwevio1yn" path="res://images/ca3g8lns.bmp" id="3_didvc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pt7b"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_pjgti"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6sw00"]
 
@@ -44,7 +41,6 @@ text = "prompt"
 [node name="note" type="MeshInstance3D" parent="Head/Vertical/InteractRayCast"]
 transform = Transform3D(-4.37114e-10, 0, -1, 0, 1, 0, 0.01, 0, -4.37114e-08, 0.0279122, 0.0164952, -2.00458)
 visible = false
-mesh = SubResource("BoxMesh_pjgti")
 skeleton = NodePath("../..")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Head/Vertical/InteractRayCast/note"]
@@ -54,8 +50,8 @@ collision_layer = 2
 shape = SubResource("BoxShape3D_6sw00")
 
 [node name="Sprite3D" type="Sprite3D" parent="Head/Vertical/InteractRayCast/note/StaticBody3D/CollisionShape3D"]
-transform = Transform3D(-0.0258819, 0, -0.965926, 0, 0.1, 0, 0.0965926, 0, -0.258819, 1.59985, 0, 0)
-texture = ExtResource("3_didvc")
+transform = Transform3D(-0.00776457, 0, -0.965926, 0, 0.03, 0, 0.0289778, 0, -0.258819, 94.2492, -0.0423205, -4.09782e-08)
+flip_h = true
 
 [node name="crosshair" type="Label" parent="Head/Vertical" groups=["Player"]]
 anchors_preset = 13

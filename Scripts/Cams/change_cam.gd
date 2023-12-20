@@ -1,5 +1,5 @@
 extends Camera3D
-
+class_name Chage
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

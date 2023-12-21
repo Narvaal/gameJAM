@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
@@ -30,10 +30,10 @@
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
 [ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_bnbjg"]
-[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
+[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="AudioStream" uid="uid://dth8i17yrvulf" path="res://Songs/39307__the_bizniss__computer-noise-2.wav" id="27_n3xrr"]
-[ext_resource type="PackedScene" uid="uid://lhvx7gcnhov3" path="res://pathscenes/enemy_v_1.tscn" id="28_dhitu"]
+[ext_resource type="PackedScene" path="res://pathscenes/enemy_v_1.tscn" id="28_dhitu"]
 [ext_resource type="AudioStream" uid="uid://5cxv3e3ajqem" path="res://Songs/wind-in-trees-117477.mp3" id="30_ubdkn"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
@@ -854,6 +854,9 @@ value_moved = 0.1
 transform = Transform3D(1, 0, 4.65661e-10, 0, 1, 0, -4.65661e-10, 0, 1, -0.0049305, 0, 0.714832)
 mesh = SubResource("BoxMesh_qmi0u")
 
+[node name="enemy-v1" parent="Room/computer/screens/screen_2/cams/Camera1" instance=ExtResource("28_dhitu")]
+transform = Transform3D(0.999999, 2.6077e-08, -1.3411e-07, 1.49012e-08, 0.999999, -3.25963e-08, 1.49012e-07, -5.30854e-08, 0.999999, -0.417084, -8.80245, -1.47276)
+
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_2/cams"]
 transform = Transform3D(0.458352, -0.323845, 0.82767, -0.0732322, 0.914325, 0.398306, -0.885749, -0.243176, 0.395367, 93.5516, 85.8027, 34.8233)
 script = ExtResource("24_oqnrs")
@@ -884,6 +887,9 @@ mesh = SubResource("BoxMesh_qmi0u")
 [node name="Camera2" type="Camera3D" parent="Room/computer/screens/screen_3/cams"]
 transform = Transform3D(-0.843799, 0.0641456, 0.532812, 0.0766821, 0.997055, 0.00140315, -0.531153, 0.0420411, -0.846232, 58.5715, 52.6453, -33.5911)
 script = ExtResource("24_oqnrs")
+
+[node name="enemy-v1" parent="Room/computer/screens/screen_3/cams/Camera2" instance=ExtResource("28_dhitu")]
+transform = Transform3D(1, 0, 0, 0, 1, -8.19564e-08, 2.98023e-08, 0, 1, -0.0342922, -8.72527, -0.919754)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Room/computer/screens/screen_3/cams/Camera2"]
 transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736284, 0, 0.53379)
@@ -926,7 +932,7 @@ transform = Transform3D(-0.359461, -8.09133, -0.0162562, 2.36287, -1.21753, -0.0
 shape = SubResource("BoxShape3D_s5f0f")
 
 [node name="enemy" parent="Room" instance=ExtResource("27_0trq7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1272, -17.1284, -9.76388)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -1.21484, -44.5586, -24.2139)
 
 [node name="TOILET_PEE" parent="Room" instance=ExtResource("37_1rm5h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.312828, -16.3632, 1.08298)
@@ -1101,7 +1107,7 @@ custom_minimum_size = Vector2(1920, 40)
 layout_mode = 0
 theme = SubResource("Theme_0heex")
 theme_override_fonts/font = ExtResource("43_2i4d2")
-max_length = 20
+max_length = 100
 context_menu_enabled = false
 virtual_keyboard_enabled = false
 virtual_keyboard_type = 6

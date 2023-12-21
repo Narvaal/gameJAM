@@ -20,7 +20,7 @@ func _process(delta):
 	animation.play("idle")
 
 	rng.randomize()
-	if rng.randi_range(0,50000) == 1:
+	if rng.randi_range(0,500000) == 1:
 		self.visible = true
 		
 		if palmtop.visible == true:
@@ -30,7 +30,7 @@ func _process(delta):
 		
 		
 	rng.randomize()
-	if rng.randi_range(0,200) == 1:
+	if rng.randi_range(0,1000) == 1:
 		self.visible = false
 	
 	#pathFollow3D.progress += move_speed * delta

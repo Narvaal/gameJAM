@@ -13,9 +13,9 @@ var find_index = 0
 
 var finalizado = false
 var respondendo = false
-var perguntas_1: Array[String] = ["qual é o nome","quantos"]
+var perguntas_1: Array[String] = ["M23 aparentemente possui um dinosauro de comportamento estranho. Identifique a espécie!","Algumas capturas decteram movimentos rapidos, identifique a espécie!","Dinossauros velozes foram identificado. informe quantos foram capturados!","Existem algumas especies bastante hostis capturadas pela R23. Identifique-os!","L12 captorou imagens de um dinossauro aparentemente robusto. Idenfique-o!","Algum dinosauro teve comportamenteo estranho?","Parece que um ser não catalogado foi capturado, fique atento!"]
 var respostas_1 = []
-var respostas_corretas = ["1","2","3"]
+var respostas_corretas = ["8953","1567","2","15672529","9845","0002","0003"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -33,15 +33,6 @@ func _process(delta):
 			if find_index != -1:
 				input.text = auto_complete[find_index]
 			
-	#if Input.is_action_just_pressed("ui_up"):
-		#if cont < input_list.size():
-			#input.text = input_list[cont]
-			#cont += 1
-			#
-	#if Input.is_action_just_pressed("ui_down"):
-		#if cont > 0 :
-			#input.text = input_list[cont]
-			#cont -= 1
 			
 	if Input.is_action_just_pressed("ui_text_submit"):
 		if input.text != "":
@@ -68,10 +59,10 @@ func _process(delta):
 				"back":
 					prompt.text += back()
 					prompt.text += get_relatorios()
-				
 				"glossario":
 					prompt.text += get_glossario()
-					
+				"help":
+					prompt.text += help()
 				"sair":
 					player.can_look_around = true
 					self.visible = false
@@ -185,11 +176,11 @@ rlt-1.txt		01/06/1967			*
 
 func get_answer(value:String):
 	if value != null:
-		respostas_1 = value.rsplit(" ", true, 1)
+		respostas_1 = value.split(" ", false, 100)
 		respondendo = false
 
 func get_help_quests():
-	return "O usuario deve responder as perguntas a baixo separado por espaços vazios[ ] + \n"
+	return "O usuario deve responder cada pergunta serpara por um espaço em branco, \n  as perguntas e as respostas está codificadas, use o glossario  \n\n"
 
 func get_quest1():
 	var main = get_help_quests()
@@ -203,7 +194,7 @@ func get_quest1():
 	return get_comandos() + main
 
 func get_comandos():
-	return "Caso não queira refazer o relatorio escreva back para voltar + \n"
+	return "Caso não queira refazer o relatorio escreva BACK para voltar \n\n"
 
 
 func get_score():
@@ -212,26 +203,27 @@ func get_score():
 		for i in range(perguntas_1.size()):
 			if respostas_1[i] == respostas_corretas[i]:
 				pontos += 4
+		if pontos == 28:
+			print("final real")
+			get_tree
+			get_tree().change_scene_to_file("res://scenes/finalsceene.tscn")
 		finalizado = true
-		return "Total " + str(pontos)
+		return "Total " + str(pontos) + "/28"
 	finalizado = false
-	return "Responda o relatorios antes"
-	
+
+	return "Responda o relatorio antes de enviar \n"
+
 func back():
 	return "Saiu do modo preenchimento + \n"
 
 
-func _on_line_edit_text_changed(new_text):
-	print("asd")
-
-
-
 func help():
-	return "
-	Comandos: Clear 
-	
-	
-	"
+	return "[color=white]\n\n
+Comandos: 
+	Clear - Limpa a tela
+	Back - Cancela modo preenhcer relatorio
+	Sair - Sai do console
+"
 
 func get_glossario():
 	return "[color=white]
@@ -258,12 +250,9 @@ func get_glossario():
 --------------------------
 - Anomalia --- 65
 --------------------------
-- Dia1 -- D0
-- Dia2 -- D1
-- Dia3 -- D2
-- Dia4 -- D3
-- Dia5 -- D4
-- Dia6 -- D5
-- Dia7 -- D6
+2529 -- Bipede, braços curtos, carnivoro.
+8953 -- Grandes placas ósseas das costas e do rabo.
+9845 -- Grande força física, três chifres.
+1567 -- Veloz, carnívoro bípede, pequeno.
 --------------------------
 "

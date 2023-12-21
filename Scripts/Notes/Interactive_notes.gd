@@ -11,11 +11,12 @@ extends StaticBody3D
 @export var prompt_message = "[E] to sit"
 @export var prompt_action = "interact"
 var parent = MeshInstance3D
-
+var sfx
 
 func _ready():
 	parent = self.get_parent()
-
+	sfx = load("res://Songs/614081__mateusboga__opening-a-book.wav") 
+	
 func mouseover():
 	
 	for action in InputMap.action_get_events(prompt_action):
@@ -23,6 +24,7 @@ func mouseover():
 			return prompt_message
 		
 func pressed():
+	note_sound.stream = sfx
 	parent.queue_free()
 	note.visible = true
 	sprite.texture = sprite_globe.texture

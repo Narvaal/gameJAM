@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dmriluslyfrwb" path="res://Blender-Models/BAKED/BED/bed_flat-lay-metal-surface.jpg" id="19_2m1oh"]
 [ext_resource type="Texture2D" uid="uid://34kmu0a2rd6a" path="res://Blender-Models/BAKED/COMPUTER/computer_Image_0.jpg" id="20_dm47j"]
 [ext_resource type="Texture2D" uid="uid://cosrm056yl6bg" path="res://Blender-Models/BAKED/BED/bed_bed_cochao.jpg" id="20_oyxy3"]
-[ext_resource type="Texture2D" uid="uid://cbpid6imwvdds" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
+[ext_resource type="Texture2D" uid="uid://car3ns2k4so3a" path="res://Blender-Models/BAKED/CHAIR/chair_dirtfabricchair.jpg" id="20_s1glp"]
 [ext_resource type="Texture2D" uid="uid://bp5bwjd61ede4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_4.jpg" id="21_dcbpg"]
 [ext_resource type="Texture2D" uid="uid://dtixeceu0khh4" path="res://Blender-Models/BAKED/COMPUTER/computer_computer_Image_6.jpg" id="22_sqwve"]
 [ext_resource type="Script" path="res://Scripts/computers/screen.gd" id="23_5fggu"]
@@ -30,10 +30,10 @@
 [ext_resource type="Script" path="res://Scripts/Cams/Moviment_cam.gd" id="24_oqnrs"]
 [ext_resource type="PackedScene" uid="uid://bemvna1ocbaas" path="res://Blender-Models/BAKED/AK47/AK47.glb" id="26_1efwb"]
 [ext_resource type="AudioStream" uid="uid://b1vpa8435d1ww" path="res://Songs/button.mp3" id="26_bnbjg"]
-[ext_resource type="PackedScene" uid="uid://bradyf6utjqqi" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
+[ext_resource type="PackedScene" uid="uid://bfecmh8bd5nyv" path="res://Blender-Models/BAKED/INEMYY/enemy.glb" id="27_0trq7"]
 [ext_resource type="Script" path="res://Scripts/computers/load_computer.gd" id="27_3qaib"]
 [ext_resource type="AudioStream" uid="uid://dth8i17yrvulf" path="res://Songs/39307__the_bizniss__computer-noise-2.wav" id="27_n3xrr"]
-[ext_resource type="PackedScene" path="res://pathscenes/enemy_v_1.tscn" id="28_dhitu"]
+[ext_resource type="PackedScene" uid="uid://lhvx7gcnhov3" path="res://pathscenes/enemy_v_1.tscn" id="28_dhitu"]
 [ext_resource type="AudioStream" uid="uid://5cxv3e3ajqem" path="res://Songs/wind-in-trees-117477.mp3" id="30_ubdkn"]
 [ext_resource type="Texture2D" uid="uid://d3svxhcv4207a" path="res://images/2.png" id="30_w8pgi"]
 [ext_resource type="PackedScene" uid="uid://b0g7dydumwjjo" path="res://scenes/control.tscn" id="31_2bu8m"]
@@ -568,8 +568,8 @@ shader_parameter/roll_variation = 5.0
 shader_parameter/distort_intensity = 0.01
 shader_parameter/noise_opacity = 0.0
 shader_parameter/noise_speed = 0.0
-shader_parameter/static_noise_intensity = 0.001
-shader_parameter/aberration = 0.01
+shader_parameter/static_noise_intensity = 0.008
+shader_parameter/aberration = 0.00500005
 shader_parameter/brightness = 1.5
 shader_parameter/discolor = false
 shader_parameter/warp_amount = 0.0
@@ -696,7 +696,7 @@ transform = Transform3D(-0.82486, -9.80157e-08, 0.133214, -0.0706933, 0.70819, -
 transform = Transform3D(-0.637246, 0, 0.540424, 0, 0.835548, 0, -0.540424, 0, -0.637246, 0.161294, -0.318931, -0.158515)
 
 [node name="chair" type="MeshInstance3D" parent="Room"]
-transform = Transform3D(0.996174, 0, 0.0873894, 0, 1, 0, -0.0873894, 0, 0.996174, 0.461873, -15.6208, -3.58229)
+transform = Transform3D(0.830601, 0, 0.556867, 0, 1, 0, -0.556867, 0, 0.830601, 0.730885, -15.6208, -3.65638)
 mesh = SubResource("ArrayMesh_tnul0")
 skeleton = NodePath("")
 

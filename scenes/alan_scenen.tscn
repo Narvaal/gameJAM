@@ -673,6 +673,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.459193, -16.3556, 1.16956)
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/minibar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69661, 0, -1.68865)
 stream = ExtResource("15_xc5em")
+volume_db = -10.0
 autoplay = true
 
 [node name="bed" type="MeshInstance3D" parent="Room"]

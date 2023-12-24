@@ -30,7 +30,7 @@ func _process(delta):
 
 	if can_be_visible:
 		rng.randomize()
-		if rng.randi_range(0,rng) == 1:
+		if rng.randi_range(0,rng_max) == 1:
 			self.visible = true
 			audio.play()
 			can_be_visible = false

@@ -7,34 +7,42 @@
 
 [node name="Menu" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_ko3g6")
 metadata/_edit_vertical_guides_ = [1921.0]
 
 [node name="PanelContainer" type="MarginContainer" parent="."]
-custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="PanelContainer/PanelContainer"]
-position = Vector2(953, 594)
+position = Vector2(-960, -600)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_3bolq")
+offset = Vector2(800, 500)
 
 [node name="Control" type="Control" parent="PanelContainer/PanelContainer"]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/PanelContainer/Control"]
-custom_minimum_size = Vector2(500, 100)
-layout_mode = 0
-offset_left = 81.0
-offset_top = 772.0
-offset_right = 581.0
-offset_bottom = 976.0
+layout_mode = 1
+anchors_preset = -1
+offset_left = -915.0
+offset_top = 215.0
+offset_right = 214.0
+offset_bottom = 204.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer/Control/PanelContainer"]
 layout_mode = 2

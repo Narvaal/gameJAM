@@ -20,13 +20,14 @@ var respostas_corretas = ["8953","1567","2","15672529","9845","0002","0003"]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	input.grab_focus()
+
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	prompt.text += get_menu()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	input.grab_focus()
 		
-
 	if Input.is_action_just_pressed("ui_focus_next"):
 		if input.text != "":
 			find_index = auto_complete.find(input.text.to_lower(),0)

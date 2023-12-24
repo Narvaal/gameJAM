@@ -8,6 +8,8 @@ extends StaticBody3D
 
 @export_category("Screen config")
 @export var selected_screen: SubViewport 
+@export var enemy:	Array[Node3D]
+
 
 var cams: Array[Node]
 var label_current_cam: Label
@@ -19,19 +21,26 @@ var current_cam: int = 0
 @onready var player_screen = get_node("/root/AlanScenen/Player/screen_player/screen_colision/screen_image")
 @onready var player_screen_colision = get_node("/root/AlanScenen/Player/screen_player")
 
+
+
 func _ready():
 	cams = selected_screen.get_child(1).get_children()
 	label_current_cam = selected_screen.get_child(0)
 	label_current_cam.text = str(current_cam + 1) + "/" + str(cams.size())
 
 func mouseover():	
+	if enemy[current_cam] != null:
+		enemy[current_cam].can_be_visible = true
+
+		
+		
 	for action in InputMap.action_get_events(prompt_action):
 		if action is InputEventKey:
 			return prompt_message 
 	
+
 	
 func pressed():
-	
 	if current_cam < cams.size() - 1:
 		current_cam += 1
 	else:
@@ -48,6 +57,7 @@ func pressed2():
 	if player_screen.visible:
 		#player.can_move = true
 		#player.can_look_around = true
+		
 		player_screen_colision.collision_layer = player.collision_layer + 1
 		player_screen.visible = false
 	else:
@@ -58,3 +68,4 @@ func pressed2():
 		player_screen.texture = selected_screen.get_texture()
 		player_screen_colision.collision_layer = player.collision_layer
 		player_screen.visible = true
+		player_selected_screen.enemy = self.enemy

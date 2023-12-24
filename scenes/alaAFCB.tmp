@@ -729,14 +729,16 @@ shape = SubResource("BoxShape3D_tsikj")
 transform = Transform3D(3.14914, 0, 0, 0, 1, 0, 0, 0, 4.04188, 0, 2.75771, -0.458448)
 shape = SubResource("BoxShape3D_ytu14")
 
-[node name="computer_screen_left" type="Node3D" parent="Room/computer" groups=["screens"]]
+[node name="computer_screen_left" type="Node3D" parent="Room/computer"]
 transform = Transform3D(0.817117, 0.0174483, 0.130888, -0.00783374, 0.514574, -0.177521, -0.111534, 0.0916882, 0.97138, -0.814776, 1.17524, 0.206207)
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_left" node_paths=PackedStringArray("selected_screen", "enemy")]
 script = ExtResource("23_5fggu")
 prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+prompt_action = null
+prompt_action2 = null
 selected_screen = NodePath("../../screens/screen_1")
-enemy = [NodePath("../../screens/screen_1/cams/Camera1/enemy-v1"), NodePath("../../screens/screen_1/cams/Camera2/enemy-v1"), NodePath("../../screens/screen_1/cams/Camera3/enemy-v1")]
+enemy = NodePath("../../screens/screen_1/cams/Camera1/enemy-v1")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_left/screen_body"]
 transform = Transform3D(1, -9.31323e-10, 0, -3.72529e-09, 1, -7.45058e-09, 0, 7.45058e-09, 0.1, 0, 0, 0)
@@ -746,14 +748,16 @@ shape = SubResource("BoxShape3D_c6gmr")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 texture = SubResource("ViewportTexture_wth1o")
 
-[node name="computer_screen_middle_top" type="Node3D" parent="Room/computer" groups=["screens"]]
+[node name="computer_screen_middle_top" type="Node3D" parent="Room/computer"]
 transform = Transform3D(0.806999, 0, 0, 0, 0.453323, -0.456214, 0, 0.181821, 1.13745, -0.00259009, 1.78018, 0.312428)
 
 [node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_middle_top" node_paths=PackedStringArray("selected_screen", "enemy")]
 script = ExtResource("23_5fggu")
 prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+prompt_action = null
+prompt_action2 = null
 selected_screen = NodePath("../../screens/screen_2")
-enemy = [NodePath("../../screens/screen_2/cams/Camera1/enemy-v1"), null]
+enemy = NodePath("../../screens/screen_1/cams/Camera1/enemy-v1")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_middle_top/screen_body"]
 transform = Transform3D(1, 0, 0, 0, 1, -7.45058e-09, 0, -1.49012e-08, 0.1, 0, 0, 0)
@@ -763,14 +767,15 @@ shape = SubResource("BoxShape3D_c6gmr")
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
 texture = SubResource("ViewportTexture_wabwr")
 
-[node name="computer_screen_right" type="Node3D" parent="Room/computer" groups=["screens"]]
+[node name="computer_screen_right" type="Node3D" parent="Room/computer"]
 transform = Transform3D(0.837576, -0.00716121, -0.0854255, -0.00636011, 0.470056, -0.0759692, 0.134901, 0.0666239, 0.526808, 0.816394, 1.19348, 0.216783)
 
-[node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_right" node_paths=PackedStringArray("selected_screen", "enemy")]
+[node name="screen_body" type="StaticBody3D" parent="Room/computer/computer_screen_right" node_paths=PackedStringArray("selected_screen")]
 script = ExtResource("23_5fggu")
 prompt_message = "[E] Alternar câmera [F] Ver no tablet"
+prompt_action = null
+prompt_action2 = null
 selected_screen = NodePath("../../screens/screen_3")
-enemy = [null, NodePath("../../screens/screen_3/cams/Camera2/enemy-v1")]
 
 [node name="screen_colision" type="CollisionShape3D" parent="Room/computer/computer_screen_right/screen_body"]
 transform = Transform3D(1, -9.31323e-10, -9.31323e-10, 7.45058e-09, 1, 1.86265e-09, 0, 0, 0.1, 0, 0, 0)
@@ -912,9 +917,6 @@ transform = Transform3D(1, 0, 1.86265e-09, 0, 1, 0, -1.86265e-09, 0, 1, -0.00736
 visible = false
 mesh = SubResource("BoxMesh_wjxtw")
 
-[node name="Timer" type="Timer" parent="Room/computer/screens"]
-wait_time = 0.2
-
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Room/computer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.991119, 0)
 stream = SubResource("AudioStreamRandomizer_eyaps")
@@ -1047,6 +1049,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.47069, -0.659529)
 collision_layer = 4
 script = ExtResource("23_5fggu")
 prompt_message = "[E] Alternar câmera [F] Largar Tablet"
+prompt_action = null
+prompt_action2 = null
 selected_screen = NodePath("../../Room/computer/screens/screen_2")
 
 [node name="screen_colision" type="CollisionShape3D" parent="Player/screen_player"]
@@ -1217,9 +1221,3 @@ curve = SubResource("Curve3D_3cvcd")
 transform = Transform3D(1, 0, 0, 0, 0.994613, -0.103661, 0, 0.103661, 0.994613, 0, 0, 0)
 script = ExtResource("60_fnyst")
 pathFollow3D = NodePath("..")
-
-[connection signal="timeout" from="Room/computer/screens/Timer" to="Room/computer/screens/screen_1/cams/Camera1/enemy-v1" method="_on_timer_timeout"]
-[connection signal="timeout" from="Room/computer/screens/Timer" to="Room/computer/screens/screen_1/cams/Camera2/enemy-v1" method="_on_timer_timeout"]
-[connection signal="timeout" from="Room/computer/screens/Timer" to="Room/computer/screens/screen_1/cams/Camera3/enemy-v1" method="_on_timer_timeout"]
-[connection signal="timeout" from="Room/computer/screens/Timer" to="Room/computer/screens/screen_2/cams/Camera1/enemy-v1" method="_on_timer_timeout"]
-[connection signal="timeout" from="Room/computer/screens/Timer" to="Room/computer/screens/screen_3/cams/Camera2/enemy-v1" method="_on_timer_timeout"]

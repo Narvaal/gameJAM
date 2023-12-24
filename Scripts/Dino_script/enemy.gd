@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var animation = $AnimationPlayer
 @export var pathFollow3D: PathFollow3D
-@export var volume:float = 0
+@export var volume:float = -30
 @export var rng_max = 20000
 var rng = RandomNumberGenerator.new()
 

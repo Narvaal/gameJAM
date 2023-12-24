@@ -13,8 +13,8 @@ var sfx
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sfx = load("res://Songs/jumpscare.wav") 
-	#sfx = load("res://Songs/button.mp3") 
+	#sfx = load("res://Songs/jumpscare.wav") 
+	sfx = load("res://Songs/button.mp3") 
 	audio.stream = sfx
 	self.visible = false
 	pass
@@ -27,7 +27,7 @@ func _process(delta):
 	
 	if can_be_visible:
 		rng.randomize()
-		if rng.randi_range(0,10000) == 1:
+		if rng.randi_range(0,20000) == 1:
 			self.visible = true
 			audio.play()
 			can_be_visible = false
